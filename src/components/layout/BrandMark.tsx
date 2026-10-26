@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { brandMark, siteConfig } from "@/lib/site";
@@ -37,14 +36,13 @@ export function BrandMark({
       )}
     >
       {brandMark.src ? (
-        <Image
+        <img
           src={isFooter ? "/brand/logo-horizontal-white.svg" : brandMark.src}
           alt={brandMark.alt}
           width={isFooter ? 847 : brandMark.width}
           height={isFooter ? 210 : brandMark.height}
-          priority={!isFooter}
           className={cn(
-            "h-auto w-auto object-contain object-left transition-editorial",
+            "block h-auto w-[170px] max-w-full object-contain object-left transition-editorial sm:w-[220px] md:w-[260px]",
             isFooter
               ? // Slightly larger than header; restrained within compact footer
                 "max-h-[5.25rem] md:max-h-[5.5rem]"

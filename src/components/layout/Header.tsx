@@ -156,7 +156,11 @@ export function Header({ className }: HeaderProps) {
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((value) => !value)}
         >
-          Menu
+          <span aria-hidden="true" className="flex h-5 w-6 flex-col justify-between py-0.5">
+            <span className="block h-[1.5px] w-full bg-current" />
+            <span className="block h-[1.5px] w-full bg-current" />
+            <span className="block h-[1.5px] w-full bg-current" />
+          </span>
         </button>
       </Container>
 
