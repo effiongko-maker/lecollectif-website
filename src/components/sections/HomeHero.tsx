@@ -41,7 +41,7 @@ export function HomeHero({ className }: HomeHeroProps) {
           <h1
             id="home-hero-heading"
             className={cn(
-              "mt-6 font-display font-normal uppercase text-foreground text-display-xl hero-reveal hero-delay-2",
+              "mt-6 font-display font-normal text-foreground text-display-xl hero-reveal hero-delay-2",
               "tracking-[-0.03em]",
             )}
           >

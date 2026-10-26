@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
-import { Button } from "@/components/ui/Button";
+import { RequestSubmit } from "@/components/booking/RequestSubmit";
 import { Field, Input, Select, Textarea } from "@/components/ui/Field";
 import { enquirePageContent, enquireTopics } from "@/lib/enquire";
 import { cn } from "@/lib/utils";
@@ -11,40 +11,24 @@ type EnquireFormProps = {
 };
 
 /**
- * Editorial enquiry form — interactions only; no backend submission yet.
+ * Editorial enquiry form — reviewed details are sent through the server email endpoint.
  */
 export function EnquireForm({ className }: EnquireFormProps) {
   const formId = useId();
-  const { fields, submitLabel, reassurance, received } = enquirePageContent.form;
-  const [submitted, setSubmitted] = useState(false);
+  const { fields } = enquirePageContent.form;
+  const [details, setDetails] = useState<Record<string,string> | null>(null);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    setDetails(Object.fromEntries(new FormData(event.currentTarget).entries()) as Record<string,string>);
   }
 
-  if (submitted) {
-    return (
-      <div
-        className={cn(
-          "border-y border-border py-12 text-left md:py-14 md:text-center",
-          className,
-        )}
-        role="status"
-        aria-live="polite"
-      >
-        <p className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
-          Enquiry received.
-        </p>
-        <p className="mt-4 text-body-lg text-foreground-muted">{received}</p>
-      </div>
-    );
-  }
 
   return (
     <form
       id={formId}
       onSubmit={handleSubmit}
+      onChange={(event) => { if (event.target instanceof Element && event.target.hasAttribute("name")) setDetails(null); }}
       noValidate={false}
       className={cn("flex flex-col gap-8 md:gap-9", className)}
     >
@@ -139,16 +123,9 @@ export function EnquireForm({ className }: EnquireFormProps) {
       </Field>
 
       <div className="flex flex-col items-start gap-4 border-t border-border pt-8 md:items-center md:text-center">
-        <Button
-          type="submit"
-          variant="primary"
-          size="md"
-          className="min-h-12 tracking-[0.1em]"
-        >
-          {submitLabel}
-          <span aria-hidden>→</span>
-        </Button>
-        <p className="text-small text-ink-subtle">{reassurance}</p>
+        <button type="submit" className="border border-foreground px-6 py-3 text-button">Review enquiry</button>
+        {details && <RequestSubmit type="enquiry" details={details} />}
+
       </div>
     </form>
   );

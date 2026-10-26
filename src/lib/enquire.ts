@@ -55,7 +55,7 @@ export const enquirePageContent = {
       },
     },
     submitLabel: "Send enquiry",
-    reassurance: "We'll get back to you with the best way forward.",
+    reassurance: "Online submission is not yet connected. Please contact the venue directly.",
     received:
       "Thank you. Your enquiry has been noted — we'll be in touch with the best way forward.",
   },

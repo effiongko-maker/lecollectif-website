@@ -38,7 +38,7 @@
   --lc-charcoal-soft: #2c2a27;
   --lc-ink: #1f1d1a;
   --lc-ink-muted: var(--foreground-muted);
-  --lc-ink-subtle: #938e87;
+  --lc-ink-subtle: #706a62;
   --lc-stone: #e5dfd5;
   --lc-stone-muted: #c4bdb2;
   --lc-taupe: #b7aea3;
@@ -60,10 +60,10 @@
 
   --gutter: clamp(1.25rem, 4.5vw, 3rem);
   --section-space-sm: clamp(3.5rem, 6vw, 5rem);
-  --section-space-md: clamp(5rem, 9vw, 8rem);
+  --section-space-md: clamp(3.5rem, 7vw, 6rem);
   /* Slightly tighter than initial scale — keeps hospitality breath */
-  --section-space-lg: clamp(5.75rem, 10.5vw, 9.25rem);
-  --section-space-xl: clamp(8rem, 15vw, 13rem);
+  --section-space-lg: clamp(4rem, 8vw, 7rem);
+  --section-space-xl: clamp(5rem, 10vw, 9rem);
 
   /* ── Motion ─────────────────────────────────────────────── */
   --ease-out-editorial: cubic-bezier(0.22, 1, 0.36, 1);
@@ -198,7 +198,7 @@
   /* ── Typography hierarchy ─────────────────────────────── */
   .text-display-xl {
     font-family: var(--font-display), ui-serif, Georgia, serif;
-    font-size: clamp(3rem, 8vw, 6.25rem);
+    font-size: clamp(2.75rem, 6vw, 5rem);
     font-weight: 400;
     letter-spacing: -0.035em;
     line-height: 1.02;

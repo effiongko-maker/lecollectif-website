@@ -70,7 +70,7 @@ export function HomeSpaces({ className }: HomeSpacesProps) {
               aria-label="Le CollectiF spaces"
             >
               {spaceOfferings.map((offering, index) => (
-                <li key={offering.id} className="md:min-w-0">
+                <li key={offering.id} className="min-w-[78%] shrink-0 sm:min-w-[58%] md:min-w-0">
                   <SpaceRailPanel
                     offering={offering}
                     offset={railOffsets[index] ?? "none"}

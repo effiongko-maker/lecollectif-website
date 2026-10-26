@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { RequestSubmit } from "@/components/booking/RequestSubmit";
 import { FlowNav } from "@/components/booking/FlowNav";
 import { FlowShell } from "@/components/booking/FlowShell";
 import { OrderSummary } from "@/components/booking/OrderSummary";
@@ -93,7 +94,7 @@ export function BookFlow() {
       eyebrow={intro.eyebrow}
       headline={intro.headline}
       supporting={intro.supporting}
-      steps={bookFlowSteps}
+      steps={bookFlowSteps.filter(s => s.id !== "payment" && s.id !== "confirmation")}
       currentStepId={step}
     >
       {step === "space" ? (
@@ -298,16 +299,12 @@ export function BookFlow() {
             Review booking
           </h2>
           <p className="mt-3 text-body text-foreground-muted">
-            Confirm the details below before continuing to payment.
+            Review your details, then send a booking request.
           </p>
           <div className="mt-6">
             <OrderSummary rows={summaryRows} />
           </div>
-          <FlowNav
-            onBack={() => goTo("details")}
-            onContinue={() => goTo("payment")}
-            continueLabel="Continue to payment"
-          />
+          <RequestSubmit type="workspace" details={data} />
         </div>
       ) : null}
 

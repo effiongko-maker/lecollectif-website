@@ -17,7 +17,7 @@ type FooterProps = {
 
 function FooterLink({ link }: { link: FooterNavLink }) {
   const className =
-    "text-nav text-background/55 transition-editorial hover:text-background";
+    "text-nav text-background/75 transition-editorial hover:text-background";
 
   if (link.href) {
     return (
@@ -28,7 +28,7 @@ function FooterLink({ link }: { link: FooterNavLink }) {
   }
 
   return (
-    <span className="text-nav text-background/40" aria-disabled="true">
+    <span className="text-nav text-background/65" aria-disabled="true">
       {link.label}
     </span>
   );
@@ -51,10 +51,10 @@ export function Footer({ className }: FooterProps) {
             <p className="mt-5 text-body-lg text-background/70">
               {siteConfig.tagline}
             </p>
-            <p className="mt-3 text-nav text-background/40">
+            <p className="mt-3 text-nav text-background/65">
               {siteConfig.location}
             </p>
-            <p className="mt-6 font-display text-[1.25rem] leading-snug tracking-[-0.02em] text-background/50">
+            <p className="mt-6 font-display text-[1.25rem] leading-snug tracking-[-0.02em] text-background/70">
               {footerBrandLine}
             </p>
           </div>
@@ -63,7 +63,7 @@ export function Footer({ className }: FooterProps) {
           <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:gap-x-10 md:grid-cols-4 md:gap-x-6 lg:gap-x-8">
             {footerNavColumns.map((column) => (
               <nav key={column.id} aria-label={column.label}>
-                <p className="text-eyebrow text-background/35">{column.label}</p>
+                <p className="text-eyebrow text-background/65">{column.label}</p>
                 <ul className="mt-4 flex flex-col gap-2.5">
                   {column.links.map((link) => (
                     <li key={link.label}>
@@ -72,7 +72,7 @@ export function Footer({ className }: FooterProps) {
                   ))}
                 </ul>
                 {column.note ? (
-                  <p className="mt-5 max-w-[11rem] text-small text-background/30">
+                  <p className="mt-5 max-w-[11rem] text-small text-background/65">
                     {column.note}
                   </p>
                 ) : null}
@@ -87,7 +87,7 @@ export function Footer({ className }: FooterProps) {
           width="wide"
           className="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between sm:py-5"
         >
-          <p className="text-small text-background/30">
+          <p className="text-small text-background/65">
             © {year} {siteConfig.name}. All rights reserved.
           </p>
           <ul className="flex items-center gap-6">

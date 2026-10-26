@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { RequestSubmit } from "@/components/booking/RequestSubmit";
 import { FlowNav } from "@/components/booking/FlowNav";
 import { FlowShell } from "@/components/booking/FlowShell";
 import { OrderSummary } from "@/components/booking/OrderSummary";
@@ -64,7 +65,7 @@ export function ReserveFlow() {
       eyebrow={intro.eyebrow}
       headline={intro.headline}
       supporting={intro.supporting}
-      steps={reserveFlowSteps}
+      steps={reserveFlowSteps.filter(s => s.id !== "payment" && s.id !== "confirmation")}
       currentStepId={step}
     >
       {step === "date" ? (
@@ -204,16 +205,12 @@ export function ReserveFlow() {
             Review reservation
           </h2>
           <p className="mt-3 text-body text-foreground-muted">
-            Confirm the details below before continuing to the deposit step.
+            Review your details, then send a reservation request.
           </p>
           <div className="mt-6">
             <OrderSummary title="Reservation summary" rows={summaryRows} />
           </div>
-          <FlowNav
-            onBack={() => setStep("details")}
-            onContinue={() => setStep("payment")}
-            continueLabel="Continue to payment"
-          />
+          <RequestSubmit type="reservation" details={data} />
         </div>
       ) : null}
 

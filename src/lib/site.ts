@@ -16,16 +16,16 @@ export const siteConfig = {
 } as const;
 
 /**
- * Official brand mark — stacked LF monogram + wordmark + tagline.
- * Asset: public/brand/le-collectif-logo.png (transparent; gold mark).
+ * Official approved vector wordmark for light backgrounds.
+ * Footer uses the corresponding white horizontal SVG.
  * Do not recreate, recolour, or distort the official logo.
  */
 export const brandMark = {
-  src: "/brand/le-collectif-logo.png" as string | null,
+  src: "/brand/logo-horizontal-colour.svg" as string | null,
   alt: "Le CollectiF",
   /** Intrinsic asset dimensions — preserve aspect ratio in display */
-  width: 256,
-  height: 156,
+  width: 847,
+  height: 210,
 } as const;
 
 export type NavItem = {
@@ -114,8 +114,8 @@ export const footerNavColumns: FooterNavColumn[] = [
     id: "collectif",
     label: "Le CollectiF",
     links: [
-      { label: "About", href: "/about" },
-      { label: "FAQs", href: "/faqs" },
+      { label: "About the spaces", href: "/spaces" },
+      { label: "Plan your visit", href: "/visit" },
     ],
   },
   {
@@ -125,7 +125,7 @@ export const footerNavColumns: FooterNavColumn[] = [
     links: [
       { label: "Instagram" },
       { label: "WhatsApp" },
-      { label: "Email" },
+      { label: "Email", href: "mailto:info@lecollectif.ng" },
     ],
   },
 ];

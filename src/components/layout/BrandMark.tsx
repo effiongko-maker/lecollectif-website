@@ -38,10 +38,10 @@ export function BrandMark({
     >
       {brandMark.src ? (
         <Image
-          src={brandMark.src}
+          src={isFooter ? "/brand/logo-horizontal-white.svg" : brandMark.src}
           alt={brandMark.alt}
-          width={brandMark.width}
-          height={brandMark.height}
+          width={isFooter ? 847 : brandMark.width}
+          height={isFooter ? 210 : brandMark.height}
           priority={!isFooter}
           className={cn(
             "h-auto w-auto object-contain object-left transition-editorial",

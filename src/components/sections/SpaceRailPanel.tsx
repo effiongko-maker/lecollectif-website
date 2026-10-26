@@ -23,7 +23,7 @@ export function SpaceRailPanel({
   return (
     <article
       className={cn(
-        "group relative min-w-[78%] snap-center sm:min-w-[58%] md:min-w-0",
+        "group relative w-full snap-center",
         offset === "up" && "md:mt-0 lg:-mt-5",
         offset === "down" && "md:mt-6 lg:mt-10",
         className,
@@ -43,7 +43,7 @@ export function SpaceRailPanel({
             placeholderLabel={offering.media.placeholderLabel}
             showPlaceholderLabel={false}
             objectPosition={offering.media.objectPosition}
-            sizes="(min-width: 1024px) 30vw, (min-width: 640px) 55vw, 80vw"
+            sizes="(min-width: 1472px) 440px, (min-width: 768px) 32vw, (min-width: 640px) 55vw, 80vw"
           />
 
           <span

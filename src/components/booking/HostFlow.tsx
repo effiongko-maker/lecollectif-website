@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { RequestSubmit } from "@/components/booking/RequestSubmit";
 import { FlowNav } from "@/components/booking/FlowNav";
 import { FlowShell } from "@/components/booking/FlowShell";
 import { OrderSummary } from "@/components/booking/OrderSummary";
@@ -270,11 +271,7 @@ export function HostFlow() {
               </div>
             ) : null}
           </div>
-          <FlowNav
-            onBack={() => setStep("details")}
-            onContinue={() => setStep("submitted")}
-            continueLabel="Submit request"
-          />
+          <RequestSubmit type="event" details={data} />
         </div>
       ) : null}
 

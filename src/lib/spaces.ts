@@ -167,14 +167,14 @@ export const spacesPageContent = {
         label: "Private Spaces",
         description:
           "For focused work, quiet meetings and time that needs your full attention.",
-        href: `${conversionActions.book.href}?space=private`,
+        href: `${conversionActions.book.href}?space=private-offices`,
       },
       {
         id: "meeting-spaces",
         label: "Meeting Spaces",
         description:
           "Considered rooms for conversations, presentations and collaborative work.",
-        href: `${conversionActions.book.href}?space=meeting`,
+        href: `${conversionActions.book.href}?space=meeting-rooms`,
       },
       {
         id: "gathering-spaces",
