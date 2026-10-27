@@ -6,8 +6,6 @@ import type { SpaceOffering } from "@/lib/spaces";
 type SpaceRailPanelProps = {
   offering: SpaceOffering;
   className?: string;
-  /** Subtle vertical offset for editorial rhythm */
-  offset?: "none" | "up" | "down";
 };
 
 /**
@@ -16,7 +14,6 @@ type SpaceRailPanelProps = {
 export function SpaceRailPanel({
   offering,
   className,
-  offset = "none",
 }: SpaceRailPanelProps) {
   const headingId = `space-rail-${offering.id}-heading`;
 
@@ -24,8 +21,6 @@ export function SpaceRailPanel({
     <article
       className={cn(
         "group relative w-full snap-center",
-        offset === "up" && "md:mt-0 lg:-mt-5",
-        offset === "down" && "md:mt-6 lg:mt-10",
         className,
       )}
     >
@@ -39,11 +34,11 @@ export function SpaceRailPanel({
             type={offering.type}
             alt={offering.media.alt}
             src={offering.media.src}
-            aspect="portrait"
+            aspect="hero"
             placeholderLabel={offering.media.placeholderLabel}
             showPlaceholderLabel={false}
             objectPosition={offering.media.objectPosition}
-            sizes="(min-width: 1472px) 440px, (min-width: 768px) 32vw, (min-width: 640px) 55vw, 80vw"
+            sizes="(min-width: 1472px) 440px, (min-width: 768px) 30vw, 91vw"
           />
 
           <span
@@ -55,7 +50,7 @@ export function SpaceRailPanel({
         <div className="flex flex-col gap-2 transition-editorial group-hover:-translate-y-0.5 motion-reduce:transform-none motion-reduce:transition-none">
           <p className="text-eyebrow text-ink-subtle">{offering.index}</p>
 
-          <div className="flex items-baseline justify-between gap-3">
+          <div className="flex min-h-[2lh] items-baseline justify-between gap-3 lg:min-h-[1lh]">
             <h3
               id={headingId}
               className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground"

@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { HeroComposition } from "@/components/sections/HeroComposition";
+import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Link";
 import { homeHeroContent } from "@/lib/home";
 import { cn } from "@/lib/utils";
@@ -10,7 +10,7 @@ type HomeHeroProps = {
 
 /**
  * Homepage hero — editorial destination introduction.
- * Communicates place and day→evening character without venue photography.
+ * Conceptual editorial photography, explicitly distinguished from the premises.
  */
 export function HomeHero({ className }: HomeHeroProps) {
   const { eyebrow, headline, supporting, primaryCta, secondaryCta } =
@@ -21,13 +21,12 @@ export function HomeHero({ className }: HomeHeroProps) {
       aria-labelledby="home-hero-heading"
       className={cn(
         "relative overflow-hidden bg-background",
-        "min-h-[calc(100svh-4.75rem)] md:min-h-[calc(100svh-6rem)]",
         className,
       )}
     >
       <Container
         width="wide"
-        className="flex min-h-[inherit] flex-col gap-8 py-8 md:gap-10 md:py-12 lg:grid lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:items-center lg:gap-16 lg:py-8 xl:gap-20"
+        className="grid grid-cols-1 items-center gap-8 py-8 md:gap-10 md:py-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10 xl:gap-12"
       >
         <div className="flex max-w-xl flex-col justify-center lg:max-w-none lg:pr-4">
           <p
@@ -74,15 +73,22 @@ export function HomeHero({ className }: HomeHeroProps) {
           </div>
         </div>
 
-        <div
-          className={cn(
-            "relative w-full hero-reveal-composition hero-delay-5",
-            "aspect-[4/5] max-h-[42vh] sm:max-h-[46vh] md:aspect-[5/6] md:max-h-[52vh]",
-            "lg:aspect-auto lg:h-[min(68vh,36rem)] lg:max-h-none xl:h-[min(72vh,40rem)]",
-          )}
-        >
-          <HeroComposition className="absolute inset-0" />
-        </div>
+        <figure className="min-w-0 hero-reveal-composition hero-delay-5">
+          <div className="relative aspect-[3/2] w-full overflow-hidden bg-background-secondary">
+            <Image
+              src="/media/home/editorial-work-and-coffee.webp"
+              alt="Laptop, leather notebook and cappuccino in warm natural light"
+              fill
+              preload
+              quality={95}
+              sizes="(min-width: 1472px) 730px, (min-width: 1024px) 52vw, (min-width: 768px) calc(100vw - 96px), 91vw"
+              className="object-cover object-center"
+            />
+          </div>
+          <figcaption className="mt-2 text-small text-foreground-muted">
+            Conceptual editorial imagery — not the Le CollectiF premises.
+          </figcaption>
+        </figure>
       </Container>
     </section>
   );

@@ -10,8 +10,6 @@ type HomeSpacesProps = {
   className?: string;
 };
 
-const railOffsets = ["up", "down", "none"] as const;
-
 /**
  * Homepage Spaces — concise editorial visual rail.
  * Detailed SpaceOfferingBlock presentation remains available for /spaces.
@@ -61,20 +59,13 @@ export function HomeSpaces({ className }: HomeSpacesProps) {
           <Container width="wide" className="lg:px-[var(--gutter)]">
             <ul
               className={cn(
-                "flex list-none gap-4 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] snap-x snap-mandatory",
-                "sm:gap-5",
-                "md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0 md:snap-none",
-                "lg:gap-7 xl:gap-8",
-                "[&::-webkit-scrollbar]:hidden",
+                "grid list-none grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 lg:gap-7 xl:gap-8",
               )}
               aria-label="Le CollectiF spaces"
             >
-              {spaceOfferings.map((offering, index) => (
-                <li key={offering.id} className="min-w-[78%] shrink-0 sm:min-w-[58%] md:min-w-0">
-                  <SpaceRailPanel
-                    offering={offering}
-                    offset={railOffsets[index] ?? "none"}
-                  />
+              {spaceOfferings.map((offering) => (
+                <li key={offering.id} className="min-w-0">
+                  <SpaceRailPanel offering={offering} />
                 </li>
               ))}
             </ul>
