@@ -1,3 +1,4 @@
+import { PreviewNotice } from "@/components/booking/PreviewNotice";
 import type { ReactNode } from "react";
 import { Container } from "@/components/layout/Container";
 import { Rule } from "@/components/ui/Rule";
@@ -46,6 +47,7 @@ export function FlowShell({
             </p>
           ) : null}
 
+          <PreviewNotice />
           <ol
             className="mt-10 flex flex-wrap gap-x-4 gap-y-2 border-y border-border py-4"
             aria-label="Progress"

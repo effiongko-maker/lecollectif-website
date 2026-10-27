@@ -65,7 +65,7 @@ export function Footer({ className }: FooterProps) {
               <nav key={column.id} aria-label={column.label}>
                 <p className="text-eyebrow text-background/65">{column.label}</p>
                 <ul className="mt-4 flex flex-col gap-2.5">
-                  {column.links.map((link) => (
+                  {column.links.filter(link => link.href).map((link) => (
                     <li key={link.label}>
                       <FooterLink link={link} />
                     </li>
@@ -91,7 +91,7 @@ export function Footer({ className }: FooterProps) {
             © {year} {siteConfig.name}. All rights reserved.
           </p>
           <ul className="flex items-center gap-6">
-            {footerLegalLinks.map((link) => (
+            {footerLegalLinks.filter(link => link.href).map((link) => (
               <li key={link.label}>
                 <FooterLink link={link} />
               </li>

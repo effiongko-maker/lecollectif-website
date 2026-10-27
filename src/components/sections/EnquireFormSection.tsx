@@ -1,3 +1,4 @@
+import { PreviewNotice } from "@/components/booking/PreviewNotice";
 import { Container } from "@/components/layout/Container";
 import { EnquireForm } from "@/components/enquire/EnquireForm";
 import { cn } from "@/lib/utils";
@@ -17,6 +18,7 @@ export function EnquireFormSection({ className }: EnquireFormSectionProps) {
     >
       <Container width="wide">
         <div className="mx-auto max-w-2xl border-t border-border pt-10 md:pt-12">
+          <PreviewNotice />
           <EnquireForm />
         </div>
       </Container>

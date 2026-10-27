@@ -84,6 +84,7 @@ export function Media(props: MediaProps) {
           src={imageSrc}
           alt={alt}
           fill
+          quality={95}
           priority={"priority" in props ? props.priority : undefined}
           sizes={
             "sizes" in props && props.sizes

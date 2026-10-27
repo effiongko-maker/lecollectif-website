@@ -53,6 +53,7 @@ export function CafeMedia({
           src={src}
           alt={alt}
           fill
+          quality={95}
           priority={priority}
           sizes={sizes}
           style={{ objectPosition }}

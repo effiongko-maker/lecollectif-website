@@ -56,7 +56,7 @@ export function SpaceMedia({
           src={src}
           alt={alt}
           fill
-          unoptimized
+          quality={95}
           priority={priority}
           sizes={sizes}
           style={{ objectPosition }}

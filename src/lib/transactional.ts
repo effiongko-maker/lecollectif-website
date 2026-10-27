@@ -27,9 +27,9 @@ export const transactionalFlows: Record<
   reserve: {
     path: "/reserve",
     eyebrow: "Reserve a Table",
-    headline: "Save your table.",
+    headline: "Plan your table reservation.",
     supporting:
-      "Choose when you'd like to join us, and we'll take care of the rest.",
+      "Explore the reservation details. To arrange a table, contact our team directly.",
     note: "Table availability and confirmation will join this journey soon.",
   },
   host: {

@@ -71,7 +71,7 @@ export function HostFlow() {
       eyebrow={intro.eyebrow}
       headline={intro.headline}
       supporting={intro.supporting}
-      steps={hostFlowSteps}
+      steps={hostFlowSteps.filter(s => s.id !== "submitted")}
       currentStepId={step}
     >
       {step === "event" ? (
