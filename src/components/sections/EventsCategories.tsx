@@ -29,7 +29,7 @@ export function EventsCategories({ className }: EventsCategoriesProps) {
                 <Rule short className="mt-5" />
                 <h2
                   id="events-categories-heading"
-                  className="mt-7 font-display text-display-lg font-normal tracking-[-0.02em] text-foreground"
+                  className="mt-7 font-display text-display-lg font-normal text-foreground"
                 >
                   {headline}
                 </h2>
@@ -48,7 +48,7 @@ export function EventsCategories({ className }: EventsCategoriesProps) {
                       "grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,10rem)_minmax(0,1fr)] sm:gap-8",
                     )}
                   >
-                    <p className="font-display text-[1.35rem] leading-snug tracking-[-0.02em] text-foreground">
+                    <p className="text-card text-foreground">
                       {category.label}
                     </p>
                     <p className="max-w-md text-body text-foreground-muted">

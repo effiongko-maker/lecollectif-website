@@ -33,7 +33,7 @@ export function SpacesIntro({ className }: SpacesIntroProps) {
             <Rule short className="mt-4 md:mx-auto" />
             <h2
               id="spaces-intro-heading"
-              className="mt-6 font-display text-display-lg font-normal tracking-[-0.02em] text-foreground"
+              className="mt-6 font-display text-display-lg font-normal text-foreground"
             >
               {headline}
             </h2>

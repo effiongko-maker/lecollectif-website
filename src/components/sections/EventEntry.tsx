@@ -30,7 +30,7 @@ export function EventEntry({ event, className, muted = false }: EventEntryProps)
       )}
     >
       <div className="flex flex-col gap-1 md:pt-1">
-        <time className="font-display text-[1.15rem] leading-snug tracking-[-0.01em] text-foreground md:text-[1.25rem]">
+        <time className="text-body-sm text-foreground">
           {event.dateLabel}
         </time>
         {event.timeLabel ? (
@@ -40,7 +40,7 @@ export function EventEntry({ event, className, muted = false }: EventEntryProps)
 
       <div className="min-w-0 max-w-xl">
         <p className="text-eyebrow text-ink-subtle">{event.categoryLabel}</p>
-        <h3 className="mt-3 font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+        <h3 className="mt-3 text-card text-foreground">
           {event.title}
         </h3>
         <p className="mt-3 text-body text-foreground-muted">{event.summary}</p>
@@ -51,7 +51,7 @@ export function EventEntry({ event, className, muted = false }: EventEntryProps)
         <TextLink
           href={cta.href}
           withArrow
-          className="text-button tracking-[0.1em]"
+          className="text-button"
         >
           {cta.label}
         </TextLink>

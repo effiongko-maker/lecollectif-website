@@ -30,7 +30,7 @@ export function PaymentBoundaryStep({
   return (
     <div className={cn("flex flex-col gap-8", className)}>
       <div>
-        <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+        <h2 className="text-ui-title text-foreground">
           Payment
         </h2>
         <p className="mt-3 max-w-md text-body text-foreground-muted">

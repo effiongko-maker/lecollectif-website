@@ -41,7 +41,6 @@ export function HomeHero({ className }: HomeHeroProps) {
             id="home-hero-heading"
             className={cn(
               "mt-6 font-display font-normal text-foreground text-display-xl hero-reveal hero-delay-2",
-              "tracking-[-0.03em]",
             )}
           >
             {headline.map((line) => (

@@ -53,7 +53,7 @@ export function SpaceRailPanel({
           <div className="flex min-h-[2lh] items-baseline justify-between gap-3 lg:min-h-[1lh]">
             <h3
               id={headingId}
-              className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground"
+              className="text-card text-foreground"
             >
               {offering.name}
             </h3>

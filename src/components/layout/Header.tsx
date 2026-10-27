@@ -207,7 +207,7 @@ export function Header({ className }: HeaderProps) {
                 key={item.href}
                 href={item.href}
                 onClick={closeMenu}
-                className="border-b border-border/70 py-5 font-display text-[2rem] font-normal leading-none tracking-[-0.02em] text-foreground transition-editorial hover:opacity-60 sm:text-[2.35rem] motion-reduce:transition-none"
+                className="border-b border-border/70 py-5 text-menu text-foreground transition-editorial hover:opacity-60 motion-reduce:transition-none"
               >
                 {item.label}
               </Link>

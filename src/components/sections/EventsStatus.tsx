@@ -32,7 +32,7 @@ export function EventsStatus({ className }: EventsStatusProps) {
 
               <h2
                 id="events-status-heading"
-                className="mt-5 font-display text-display-lg font-normal tracking-[-0.02em] text-foreground"
+                className="mt-5 font-display text-display-lg font-normal text-foreground"
               >
                 {headline}
               </h2>
@@ -49,7 +49,7 @@ export function EventsStatus({ className }: EventsStatusProps) {
                 <TextLink
                   href={cta.href}
                   withArrow
-                  className="text-button tracking-[0.1em]"
+                  className="text-button"
                 >
                   {cta.label}
                 </TextLink>

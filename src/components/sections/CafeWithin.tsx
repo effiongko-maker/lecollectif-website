@@ -31,7 +31,7 @@ export function CafeWithin({ className }: CafeWithinProps) {
                   <Rule short className="mt-4" />
                   <h2
                     id="cafe-within-heading"
-                    className="mt-6 font-display text-h1 font-normal tracking-[-0.02em] text-foreground"
+                    className="mt-6 font-display text-h1 font-normal text-foreground"
                   >
                     {headline}
                   </h2>
@@ -49,7 +49,7 @@ export function CafeWithin({ className }: CafeWithinProps) {
                         key={link.href}
                         href={link.href}
                         withArrow
-                        className="text-button tracking-[0.1em]"
+                        className="text-button"
                       >
                         {link.label}
                       </TextLink>

@@ -7,13 +7,13 @@ import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 export const fontDisplay = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["300", "400", "500", "600"],
+  weight: "400",
   display: "swap",
 });
 
 export const fontSans = Source_Sans_3({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500"],
   display: "swap",
 });

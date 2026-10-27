@@ -38,7 +38,7 @@ export function FlowShell({
         <div className="mx-auto max-w-2xl">
           <p className="text-eyebrow text-ink-subtle">{eyebrow}</p>
           <Rule short className="mt-4" />
-          <h1 className="mt-6 font-display text-display-lg font-normal tracking-[-0.02em] text-foreground">
+          <h1 className="mt-6 font-display text-display-lg font-normal text-foreground">
             {headline}
           </h1>
           {supporting ? (

@@ -68,7 +68,7 @@ export function ButtonLink({
         controlBase,
         controlVariants[variant],
         !isText && controlSizes[size],
-        isText && "min-h-11 text-nav normal-case tracking-[0.04em]",
+        isText && "min-h-11 text-nav normal-case",
         fullWidth && "w-full",
         className,
       )}

@@ -30,7 +30,7 @@ export function CafeExperience({ className }: CafeExperienceProps) {
                 <Rule short className="mt-4" />
                 <h2
                   id="cafe-experience-heading"
-                  className="mt-6 font-display text-display-lg font-normal tracking-[-0.02em] text-foreground"
+                  className="mt-6 font-display text-display-lg font-normal text-foreground"
                 >
                   {headline}
                 </h2>
@@ -49,7 +49,7 @@ export function CafeExperience({ className }: CafeExperienceProps) {
                       "grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] sm:items-start sm:gap-8",
                     )}
                   >
-                    <p className="font-display text-[1.35rem] leading-snug tracking-[-0.02em] text-foreground">
+                    <p className="text-card text-foreground">
                       {item.label}
                     </p>
                     <p className="max-w-md text-body text-foreground-muted">

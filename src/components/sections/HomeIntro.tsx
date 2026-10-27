@@ -56,7 +56,7 @@ export function HomeIntro({ className }: HomeIntroProps) {
                 <TextLink
                   href={cta.href}
                   withArrow
-                  className="text-button tracking-[0.1em]"
+                  className="text-button"
                 >
                   {cta.label}
                 </TextLink>
@@ -94,7 +94,7 @@ export function HomeIntro({ className }: HomeIntroProps) {
                   )}
                 >
                   <p className="text-eyebrow text-ink-subtle">{rhythm.label}</p>
-                  <p className="mt-2 font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+                  <p className="mt-2 font-display text-h3 font-normal text-foreground">
                     {rhythm.line}
                   </p>
                 </div>

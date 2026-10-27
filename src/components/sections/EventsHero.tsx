@@ -39,7 +39,6 @@ export function EventsHero({ className }: EventsHeroProps) {
             id="events-hero-heading"
             className={cn(
               "mt-7 font-display font-normal text-foreground text-display-xl hero-reveal hero-delay-2",
-              "tracking-[-0.03em]",
             )}
           >
             {headline}
@@ -53,7 +52,7 @@ export function EventsHero({ className }: EventsHeroProps) {
             <TextLink
               href={cta.href}
               withArrow
-              className="text-button tracking-[0.1em]"
+              className="text-button"
             >
               {cta.label}
             </TextLink>

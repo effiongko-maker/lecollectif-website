@@ -43,7 +43,6 @@ export function FlowNav({
           size="md"
           disabled={continueDisabled}
           onClick={continueType === "button" ? onContinue : undefined}
-          className="tracking-[0.1em]"
         >
           {continueLabel}
           <span aria-hidden>→</span>

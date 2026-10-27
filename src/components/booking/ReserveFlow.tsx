@@ -70,7 +70,7 @@ export function ReserveFlow() {
     >
       {step === "date" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Preferred date
           </h2>
           <div className="mt-6 max-w-sm">
@@ -93,7 +93,7 @@ export function ReserveFlow() {
 
       {step === "time" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Preferred time
           </h2>
           <div className="mt-6 max-w-sm">
@@ -117,7 +117,7 @@ export function ReserveFlow() {
 
       {step === "guests" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Number of guests
           </h2>
           <div className="mt-6 max-w-sm">
@@ -144,7 +144,7 @@ export function ReserveFlow() {
 
       {step === "details" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Contact details
           </h2>
           <div className="mt-6 flex flex-col gap-8">
@@ -201,7 +201,7 @@ export function ReserveFlow() {
 
       {step === "review" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Review reservation
           </h2>
           <p className="mt-3 text-body text-foreground-muted">
@@ -225,7 +225,7 @@ export function ReserveFlow() {
 
       {step === "confirmation" ? (
         <div className="border-y border-border py-10 md:py-12">
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Your reservation is ready for payment.
           </h2>
           <p className="mt-4 max-w-md text-body-lg text-foreground-muted">
@@ -239,7 +239,7 @@ export function ReserveFlow() {
             <TextLink
               href={conversionActions.enquire.href}
               withArrow
-              className="text-button tracking-[0.1em]"
+              className="text-button"
             >
               Speak with us instead
             </TextLink>

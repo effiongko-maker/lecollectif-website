@@ -12,7 +12,7 @@ type LabelProps = LabelHTMLAttributes<HTMLLabelElement>;
 
 export function Label({ className, ...props }: LabelProps) {
   return (
-    <label className={cn("text-eyebrow text-foreground-muted", className)} {...props} />
+    <label className={cn("text-label text-foreground-muted", className)} {...props} />
   );
 }
 

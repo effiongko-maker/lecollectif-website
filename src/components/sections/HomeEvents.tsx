@@ -65,7 +65,7 @@ export function HomeEvents({ className }: HomeEventsProps) {
                   <TextLink
                     href={cta.href}
                     withArrow
-                    className="text-button tracking-[0.1em] !text-[#f4efe8]/90 hover:!text-[#faf7f2] transition-editorial"
+                    className="text-button !text-[#f4efe8]/90 hover:!text-[#faf7f2] transition-editorial"
                   >
                     {cta.label}
                   </TextLink>

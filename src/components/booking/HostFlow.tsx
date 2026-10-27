@@ -76,7 +76,7 @@ export function HostFlow() {
     >
       {step === "event" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Event details
           </h2>
           <div className="mt-6 flex flex-col gap-8">
@@ -116,7 +116,7 @@ export function HostFlow() {
 
       {step === "schedule" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Preferred date & time
           </h2>
           <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -149,7 +149,7 @@ export function HostFlow() {
 
       {step === "guests" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Number of guests
           </h2>
           <div className="mt-6 max-w-sm">
@@ -176,7 +176,7 @@ export function HostFlow() {
 
       {step === "requirements" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Requirements
           </h2>
           <p className="mt-3 text-body text-foreground-muted">
@@ -205,7 +205,7 @@ export function HostFlow() {
 
       {step === "details" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Contact details
           </h2>
           <div className="mt-6 flex flex-col gap-8">
@@ -253,7 +253,7 @@ export function HostFlow() {
 
       {step === "review" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Review request
           </h2>
           <p className="mt-3 text-body text-foreground-muted">
@@ -277,7 +277,7 @@ export function HostFlow() {
 
       {step === "submitted" ? (
         <div className="border-y border-border py-10 md:py-12">
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Request received.
           </h2>
           <p className="mt-4 max-w-md text-body-lg text-foreground-muted">
@@ -299,7 +299,7 @@ export function HostFlow() {
             <TextLink
               href={conversionActions.enquire.href}
               withArrow
-              className="text-button tracking-[0.1em]"
+              className="text-button"
             >
               Ask a question
             </TextLink>

@@ -28,7 +28,7 @@ export function VisitHours({ className }: VisitHoursProps) {
               <Rule short className="mt-4" />
               <h2
                 id="visit-hours-heading"
-                className="mt-6 font-display text-display-lg font-normal tracking-[-0.02em] text-foreground"
+                className="mt-6 font-display text-display-lg font-normal text-foreground"
               >
                 {headline}
               </h2>
@@ -48,7 +48,7 @@ export function VisitHours({ className }: VisitHoursProps) {
                   )}
                 >
                   <p className="text-eyebrow text-ink-subtle">{period.label}</p>
-                  <p className="font-display text-[1.35rem] leading-snug tracking-[-0.02em] text-foreground">
+                  <p className="text-card text-foreground">
                     {period.time}
                   </p>
                   <p className="max-w-md text-body text-foreground-muted">

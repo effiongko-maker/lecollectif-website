@@ -65,6 +65,24 @@
   --section-space-lg: clamp(4rem, 8vw, 7rem);
   --section-space-xl: clamp(5rem, 10vw, 9rem);
 
+  /* Typography: editorial serif + humanist sans; one responsive scale. */
+  --type-hero: clamp(2.75rem, 5.5vw, 4.75rem);
+  --type-section: clamp(2.25rem, 4.2vw, 3.75rem);
+  --type-title: clamp(2.125rem, 4vw, 3.25rem);
+  --type-subheading: clamp(1.75rem, 3vw, 2.75rem);
+  --type-editorial: clamp(1.5rem, 2.25vw, 2rem);
+  --type-card: clamp(1.25rem, 1.8vw, 1.5rem);
+  --type-card-lg: clamp(1.5rem, 2vw, 1.75rem);
+  --type-body-lg: clamp(1.125rem, 1.35vw, 1.25rem);
+  --type-body: 1.0625rem;
+  --type-body-sm: 0.9375rem;
+  --type-caption: 0.875rem;
+  --type-label: 0.8125rem;
+  --type-eyebrow: 0.75rem;
+  --type-nav: 0.9375rem;
+  --type-menu: clamp(1.75rem, 4.5vw, 2.125rem);
+  --type-button: 0.8125rem;
+
   /* ── Motion ─────────────────────────────────────────────── */
   --ease-out-editorial: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out-soft: cubic-bezier(0.4, 0, 0.2, 1);
@@ -143,9 +161,9 @@
     background: var(--background);
     color: var(--foreground);
     font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-    font-size: 1.0625rem;
-    line-height: 1.7;
-    letter-spacing: -0.005em;
+    font-size: var(--type-body);
+    line-height: 1.65;
+    letter-spacing: 0;
     font-weight: 400;
     text-rendering: optimizeLegibility;
   }
@@ -167,6 +185,13 @@
 
   p {
     text-wrap: pretty;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   }
 
   a {
@@ -196,98 +221,138 @@
   }
 
   /* ── Typography hierarchy ─────────────────────────────── */
-  .text-display-xl {
+  .text-display-xl,
+  .text-display-lg,
+  .text-h1,
+  .text-h2,
+  .text-h3,
+  .text-editorial {
     font-family: var(--font-display), ui-serif, Georgia, serif;
-    font-size: clamp(2.75rem, 6vw, 5rem);
     font-weight: 400;
-    letter-spacing: -0.035em;
-    line-height: 1.02;
+  }
+
+  .text-display-xl {
+    font-size: var(--type-hero);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
   }
 
   .text-display-lg {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
-    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-    font-weight: 400;
-    letter-spacing: -0.03em;
-    line-height: 1.08;
+    font-size: var(--type-section);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
   }
 
   .text-h1 {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
-    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
-    font-weight: 400;
-    letter-spacing: -0.028em;
-    line-height: 1.12;
+    font-size: var(--type-title);
+    line-height: 1.14;
+    letter-spacing: -0.025em;
   }
 
   .text-h2 {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
-    font-size: clamp(1.875rem, 3.5vw, 3rem);
-    font-weight: 400;
-    letter-spacing: -0.025em;
-    line-height: 1.15;
+    font-size: var(--type-subheading);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
   }
 
   .text-h3 {
-    font-family: var(--font-display), ui-serif, Georgia, serif;
-    font-size: clamp(1.5rem, 2.5vw, 2.125rem);
-    font-weight: 400;
-    letter-spacing: -0.02em;
+    font-size: var(--type-editorial);
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+  }
+
+  .text-editorial {
+    font-size: 1.375rem;
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+  }
+
+  .text-card,
+  .text-card-lg,
+  .text-ui-title,
+  .text-menu {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+  }
+
+  .text-card,
+  .text-ui-title {
+    font-size: var(--type-card);
+  }
+
+  .text-card-lg {
+    font-size: var(--type-card-lg);
+  }
+
+  .text-menu {
+    font-size: var(--type-menu);
     line-height: 1.2;
+    letter-spacing: 0;
+  }
+
+  .text-eyebrow,
+  .text-label {
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    text-transform: uppercase;
   }
 
   .text-eyebrow {
-    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-    font-size: 0.6875rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
-    text-transform: uppercase;
+    font-size: var(--type-eyebrow);
+    letter-spacing: 0.12em;
   }
 
   .text-label {
+    font-size: var(--type-label);
+    letter-spacing: 0.06em;
+  }
+
+  .text-body-lg,
+  .text-body,
+  .text-body-sm,
+  .text-small {
     font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-    font-size: 0.6875rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
-    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0;
   }
 
   .text-body-lg {
-    font-size: clamp(1.125rem, 1.4vw, 1.3125rem);
-    line-height: 1.75;
+    font-size: var(--type-body-lg);
+    line-height: 1.65;
   }
 
   .text-body {
-    font-size: 1.0625rem;
-    line-height: 1.7;
-  }
-
-  .text-small {
-    font-size: 0.875rem;
-    line-height: 1.6;
+    font-size: var(--type-body);
+    line-height: 1.65;
   }
 
   .text-body-sm {
-    font-size: 0.9375rem;
-    line-height: 1.65;
+    font-size: var(--type-body-sm);
+    line-height: 1.6;
+  }
+
+  .text-small {
+    font-size: var(--type-caption);
+    line-height: 1.6;
   }
 
   .text-nav {
     font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-    font-size: 0.8125rem;
+    font-size: var(--type-nav);
     font-weight: 400;
-    letter-spacing: 0.04em;
-    line-height: 1.4;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
   }
 
   .text-button {
     font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-    font-size: 0.75rem;
+    font-size: var(--type-button);
     font-weight: 500;
-    letter-spacing: 0.1em;
-    line-height: 1.2;
+    letter-spacing: 0.08em;
+    line-height: 1.35;
     text-transform: uppercase;
   }
 

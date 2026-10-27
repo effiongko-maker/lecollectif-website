@@ -29,7 +29,7 @@ export function VisitExpect({ className }: VisitExpectProps) {
                 <Rule short className="mt-4" />
                 <h2
                   id="visit-expect-heading"
-                  className="mt-6 font-display text-display-lg font-normal tracking-[-0.02em] text-foreground"
+                  className="mt-6 font-display text-display-lg font-normal text-foreground"
                 >
                   {headline}
                 </h2>
@@ -48,7 +48,7 @@ export function VisitExpect({ className }: VisitExpectProps) {
                       "grid grid-cols-1 gap-2 sm:grid-cols-[minmax(0,8rem)_minmax(0,1fr)] sm:gap-8",
                     )}
                   >
-                    <p className="font-display text-[1.35rem] leading-snug tracking-[-0.02em] text-foreground">
+                    <p className="text-card text-foreground">
                       {point.label}
                     </p>
                     <p className="max-w-md text-body text-foreground-muted">

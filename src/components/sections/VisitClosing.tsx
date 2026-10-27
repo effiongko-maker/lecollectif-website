@@ -28,7 +28,7 @@ export function VisitClosing({ className }: VisitClosingProps) {
               <Rule short className="mt-3 md:mx-auto" />
               <h2
                 id="visit-closing-heading"
-                className="mt-5 max-w-xl font-display text-h1 font-normal tracking-[-0.02em] text-foreground"
+                className="mt-5 max-w-xl font-display text-h1 font-normal text-foreground"
               >
                 {headline}
               </h2>
@@ -39,7 +39,7 @@ export function VisitClosing({ className }: VisitClosingProps) {
                 <TextLink
                   href={cta.href}
                   withArrow
-                  className="text-button tracking-[0.1em]"
+                  className="text-button"
                 >
                   {cta.label}
                 </TextLink>

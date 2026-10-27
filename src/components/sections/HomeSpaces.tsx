@@ -79,7 +79,7 @@ export function HomeSpaces({ className }: HomeSpacesProps) {
             <TextLink
               href={cta.href}
               withArrow
-              className="text-button tracking-[0.1em]"
+              className="text-button"
             >
               {cta.label}
             </TextLink>

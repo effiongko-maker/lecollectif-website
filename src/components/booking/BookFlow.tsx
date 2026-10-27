@@ -99,7 +99,7 @@ export function BookFlow() {
     >
       {step === "space" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Choose your space.
           </h2>
           <p className="mt-3 max-w-md text-body text-foreground-muted">
@@ -145,7 +145,7 @@ export function BookFlow() {
 
                       <span className="flex min-w-0 flex-1 flex-col gap-1">
                         <span className="flex items-baseline justify-between gap-4">
-                          <span className="font-display text-[1.25rem] tracking-[-0.02em] text-foreground">
+                          <span className="text-card text-foreground">
                             {space.name}
                           </span>
                           {selected ? (
@@ -173,7 +173,7 @@ export function BookFlow() {
 
       {step === "date" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Preferred date
           </h2>
           <div className="mt-6 max-w-sm">
@@ -197,7 +197,7 @@ export function BookFlow() {
 
       {step === "time" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Time & duration
           </h2>
           <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -238,7 +238,7 @@ export function BookFlow() {
 
       {step === "details" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Booking details
           </h2>
           <div className="mt-6 flex flex-col gap-8">
@@ -295,7 +295,7 @@ export function BookFlow() {
 
       {step === "review" ? (
         <div>
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Review booking
           </h2>
           <p className="mt-3 text-body text-foreground-muted">
@@ -319,7 +319,7 @@ export function BookFlow() {
 
       {step === "confirmation" ? (
         <div className="border-y border-border py-10 md:py-12">
-          <h2 className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+          <h2 className="text-ui-title text-foreground">
             Your booking is ready for payment.
           </h2>
           <p className="mt-4 max-w-md text-body-lg text-foreground-muted">
@@ -333,7 +333,7 @@ export function BookFlow() {
             <TextLink
               href={conversionActions.enquire.href}
               withArrow
-              className="text-button tracking-[0.1em]"
+              className="text-button"
             >
               Speak with us instead
             </TextLink>

@@ -54,7 +54,7 @@ export function Footer({ className }: FooterProps) {
             <p className="mt-3 text-nav text-background/65">
               {siteConfig.location}
             </p>
-            <p className="mt-6 font-display text-[1.25rem] leading-snug tracking-[-0.02em] text-background/70">
+            <p className="mt-6 text-editorial text-background/70">
               {footerBrandLine}
             </p>
           </div>

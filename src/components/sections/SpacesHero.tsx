@@ -35,7 +35,6 @@ export function SpacesHero({ className }: SpacesHeroProps) {
             id="spaces-hero-heading"
             className={cn(
               "mt-6 font-display font-normal text-foreground text-display-xl hero-reveal hero-delay-2",
-              "tracking-[-0.03em]",
             )}
           >
             {headline}
@@ -49,7 +48,7 @@ export function SpacesHero({ className }: SpacesHeroProps) {
             <TextLink
               href={cta.href}
               withArrow
-              className="text-button tracking-[0.1em]"
+              className="text-button"
             >
               {cta.label}
             </TextLink>

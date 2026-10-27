@@ -31,7 +31,7 @@ export function VisitLocation({ className }: VisitLocationProps) {
                 <Rule short className="mt-4" />
                 <h2
                   id="visit-location-heading"
-                  className="mt-6 font-display text-display-lg font-normal tracking-[-0.02em] text-foreground"
+                  className="mt-6 font-display text-display-lg font-normal text-foreground"
                 >
                   {headline}
                 </h2>
@@ -40,7 +40,7 @@ export function VisitLocation({ className }: VisitLocationProps) {
                 </p>
 
                 <address className="mt-8 not-italic">
-                  <p className="font-display text-h3 font-normal tracking-[-0.02em] text-foreground">
+                  <p className="text-body-lg text-foreground">
                     {visitAddress.line1}
                   </p>
                   <p className="mt-2 text-body text-foreground-muted">
@@ -57,7 +57,7 @@ export function VisitLocation({ className }: VisitLocationProps) {
                     withArrow
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-button tracking-[0.1em]"
+                    className="text-button"
                   >
                     {cta.label}
                   </TextLink>

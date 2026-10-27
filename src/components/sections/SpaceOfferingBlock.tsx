@@ -70,8 +70,8 @@ export function SpaceOfferingBlock({
           <h3
             id={headingId}
             className={cn(
-              "font-display font-normal tracking-[-0.02em] text-foreground",
-              featured ? "text-h2" : "text-h3",
+              "text-foreground",
+              featured ? "text-card-lg" : "text-card",
             )}
           >
             <Link

@@ -57,7 +57,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
     >
       <div className="section-space-lg">
         <Container width="content">
-          <TextLink href="/events" className="text-button tracking-[0.1em]">
+          <TextLink href="/events" className="text-button">
             ← All events
           </TextLink>
 
@@ -68,7 +68,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
 
           <h1
             id="event-detail-heading"
-            className="mt-7 font-display text-display-lg font-normal tracking-[-0.02em] text-foreground"
+            className="mt-7 font-display text-display-lg font-normal text-foreground"
           >
             {event.title}
           </h1>
@@ -97,7 +97,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
             <TextLink
               href="/events#upcoming"
               withArrow
-              className="text-button tracking-[0.1em]"
+              className="text-button"
             >
               Back to programme
             </TextLink>

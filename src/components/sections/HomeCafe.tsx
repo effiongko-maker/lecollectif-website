@@ -57,7 +57,7 @@ export function HomeCafe({ className }: HomeCafeProps) {
                 <TextLink
                   href={cta.href}
                   withArrow
-                  className="text-button tracking-[0.1em]"
+                  className="text-button"
                 >
                   {cta.label}
                 </TextLink>
