@@ -75,7 +75,7 @@ export function HomeIntro({ className }: HomeIntroProps) {
                   className="object-cover"
                 />
               </div>
-              <figcaption className="mt-2 text-small text-foreground-muted">Conceptual interior imagery.</figcaption>
+              
             </figure>
           </Reveal>
         </div>
