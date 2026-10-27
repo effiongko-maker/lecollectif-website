@@ -39,7 +39,7 @@ export function HomeIntro({ className }: HomeIntroProps) {
             <Reveal delay={80}>
               <h2
                 id="home-intro-heading"
-                className="mt-6 max-w-3xl font-display text-display-lg font-normal text-foreground"
+                className="mt-6 max-w-3xl text-display-lg text-foreground"
               >
                 {headline}
               </h2>
@@ -94,7 +94,7 @@ export function HomeIntro({ className }: HomeIntroProps) {
                   )}
                 >
                   <p className="text-eyebrow text-ink-subtle">{rhythm.label}</p>
-                  <p className="mt-2 font-display text-h3 font-normal text-foreground">
+                  <p className="mt-2 text-h3 text-foreground">
                     {rhythm.line}
                   </p>
                 </div>

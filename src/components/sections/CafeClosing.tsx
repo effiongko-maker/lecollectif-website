@@ -28,7 +28,7 @@ export function CafeClosing({ className }: CafeClosingProps) {
               <Rule short className="mt-3 md:mx-auto" />
               <h2
                 id="cafe-closing-heading"
-                className="mt-5 max-w-xl font-display text-h1 font-normal text-foreground"
+                className="mt-5 max-w-xl text-h1 text-foreground"
               >
                 {headline}
               </h2>

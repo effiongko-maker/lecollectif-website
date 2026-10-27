@@ -33,7 +33,7 @@ export function EventsUpcoming({ className }: EventsUpcomingProps) {
               <Rule short className="mt-5" />
               <h2
                 id="events-upcoming-heading"
-                className="mt-7 font-display text-display-lg font-normal text-foreground"
+                className="mt-7 text-display-lg text-foreground"
               >
                 {headline}
               </h2>

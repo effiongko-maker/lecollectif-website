@@ -68,7 +68,7 @@ export default async function EventDetailPage({ params }: EventDetailPageProps) 
 
           <h1
             id="event-detail-heading"
-            className="mt-7 font-display text-display-lg font-normal text-foreground"
+            className="mt-7 text-display-lg text-foreground"
           >
             {event.title}
           </h1>

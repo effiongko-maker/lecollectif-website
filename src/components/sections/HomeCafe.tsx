@@ -40,7 +40,7 @@ export function HomeCafe({ className }: HomeCafeProps) {
             <Reveal delay={90}>
               <h2
                 id="home-cafe-heading"
-                className="mt-7 max-w-md font-display text-display-lg font-normal text-foreground"
+                className="mt-7 max-w-md text-display-lg text-foreground"
               >
                 {headline}
               </h2>

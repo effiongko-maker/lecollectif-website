@@ -28,7 +28,7 @@ export function SpacesClosing({ className }: SpacesClosingProps) {
               <Rule short className="mt-3 md:mx-auto" />
               <h2
                 id="spaces-closing-heading"
-                className="mt-5 font-display text-display-lg font-normal text-foreground"
+                className="mt-5 text-display-lg text-foreground"
               >
                 {headline}
               </h2>

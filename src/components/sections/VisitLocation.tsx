@@ -31,7 +31,7 @@ export function VisitLocation({ className }: VisitLocationProps) {
                 <Rule short className="mt-4" />
                 <h2
                   id="visit-location-heading"
-                  className="mt-6 font-display text-display-lg font-normal text-foreground"
+                  className="mt-6 text-display-lg text-foreground"
                 >
                   {headline}
                 </h2>

@@ -27,7 +27,7 @@ export function VisitHero({ className }: VisitHeroProps) {
           <h1
             id="visit-hero-heading"
             className={cn(
-              "mt-6 font-display font-normal text-foreground text-display-xl hero-reveal hero-delay-2",
+              "mt-6 text-foreground text-display-xl hero-reveal hero-delay-2",
             )}
           >
             {headline}

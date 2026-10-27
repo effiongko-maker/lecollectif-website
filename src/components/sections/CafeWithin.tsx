@@ -31,7 +31,7 @@ export function CafeWithin({ className }: CafeWithinProps) {
                   <Rule short className="mt-4" />
                   <h2
                     id="cafe-within-heading"
-                    className="mt-6 font-display text-h1 font-normal text-foreground"
+                    className="mt-6 text-h1 text-foreground"
                   >
                     {headline}
                   </h2>

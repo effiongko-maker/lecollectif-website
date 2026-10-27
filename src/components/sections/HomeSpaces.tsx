@@ -40,7 +40,7 @@ export function HomeSpaces({ className }: HomeSpacesProps) {
             <Reveal delay={80}>
               <h2
                 id="home-spaces-heading"
-                className="max-w-xl font-display text-display-lg font-normal text-foreground"
+                className="max-w-xl text-display-lg text-foreground"
               >
                 {headline}
               </h2>

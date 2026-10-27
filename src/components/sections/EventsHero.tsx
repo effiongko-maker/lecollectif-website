@@ -38,7 +38,7 @@ export function EventsHero({ className }: EventsHeroProps) {
           <h1
             id="events-hero-heading"
             className={cn(
-              "mt-7 font-display font-normal text-foreground text-display-xl hero-reveal hero-delay-2",
+              "mt-7 text-foreground text-display-xl hero-reveal hero-delay-2",
             )}
           >
             {headline}

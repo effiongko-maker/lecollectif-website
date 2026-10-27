@@ -56,7 +56,7 @@ export function BrandMark({
       ) : (
         <span
           className={cn(
-            "font-display font-normal tracking-[-0.02em] transition-editorial",
+            "tracking-[-0.02em] transition-editorial",
             isFooter
               ? "text-4xl text-background md:text-5xl"
               : "text-foreground",

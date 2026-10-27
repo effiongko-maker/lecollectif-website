@@ -32,7 +32,7 @@ export function EventsStatus({ className }: EventsStatusProps) {
 
               <h2
                 id="events-status-heading"
-                className="mt-5 font-display text-display-lg font-normal text-foreground"
+                className="mt-5 text-display-lg text-foreground"
               >
                 {headline}
               </h2>

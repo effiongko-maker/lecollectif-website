@@ -28,7 +28,7 @@ export function VisitClosing({ className }: VisitClosingProps) {
               <Rule short className="mt-3 md:mx-auto" />
               <h2
                 id="visit-closing-heading"
-                className="mt-5 max-w-xl font-display text-h1 font-normal text-foreground"
+                className="mt-5 max-w-xl text-h1 text-foreground"
               >
                 {headline}
               </h2>

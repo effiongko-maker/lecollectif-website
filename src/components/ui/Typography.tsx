@@ -46,7 +46,7 @@ export function Heading({
 }: HeadingProps) {
   return (
     <Comp
-      className={cn("font-display text-foreground", headingSizes[size], className)}
+      className={cn("text-foreground", headingSizes[size], className)}
       {...props}
     />
   );

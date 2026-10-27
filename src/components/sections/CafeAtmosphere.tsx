@@ -31,7 +31,7 @@ export function CafeAtmosphere({ className }: CafeAtmosphereProps) {
               <Rule short className="mt-4" />
               <h2
                 id="cafe-atmosphere-heading"
-                className="mt-6 font-display text-h1 font-normal text-foreground"
+                className="mt-6 text-h1 text-foreground"
               >
                 {headline}
               </h2>

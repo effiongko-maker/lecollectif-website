@@ -44,7 +44,7 @@ export function HomeEvents({ className }: HomeEventsProps) {
               <Reveal delay={100}>
                 <h2
                   id="home-events-heading"
-                  className="mt-7 font-display text-display-lg font-normal text-[#f4efe8]"
+                  className="mt-7 text-display-lg text-[#f4efe8]"
                 >
                   {headline.map((line) => (
                     <span key={line} className="block">

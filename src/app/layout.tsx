@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
-import { fontDisplay, fontSans } from "@/lib/fonts";
+import { fontSans } from "@/lib/fonts";
 import { siteConfig } from "@/lib/site";
 import "@/styles/globals.css";
 
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fontSans.variable} ${fontDisplay.variable} h-full antialiased`}
+      className={`${fontSans.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-background focus:p-4">Skip to main content</a>

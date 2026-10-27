@@ -39,7 +39,7 @@ export function CafeHero({ className }: CafeHeroProps) {
           <h1
             id="cafe-hero-heading"
             className={cn(
-              "mt-6 font-display font-normal text-foreground text-display-xl hero-reveal hero-delay-2",
+              "mt-6 text-foreground text-display-xl hero-reveal hero-delay-2",
             )}
           >
             {headline}
