@@ -85,9 +85,6 @@ export function HomeHero({ className }: HomeHeroProps) {
               className="object-cover object-center"
             />
           </div>
-          <figcaption className="mt-2 text-small text-foreground-muted">
-            Conceptual editorial imagery — not the Le CollectiF premises.
-          </figcaption>
         </figure>
       </Container>
     </section>
