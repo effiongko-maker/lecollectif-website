@@ -15,6 +15,7 @@ type EnquireFormProps = {
  */
 export function EnquireForm({ className }: EnquireFormProps) {
   const formId = useId();
+  const [topic, setTopic] = useState("");
   const { fields } = enquirePageContent.form;
   const [details, setDetails] = useState<Record<string,string> | null>(null);
 
@@ -33,7 +34,7 @@ export function EnquireForm({ className }: EnquireFormProps) {
       className={cn("flex flex-col gap-8 md:gap-9", className)}
     >
       <Field label={fields.topic.label} htmlFor={fields.topic.id}>
-        <Select id={fields.topic.id} name="topic" required defaultValue="">
+        <Select id={fields.topic.id} name="topic" required defaultValue="" onChange={(event) => setTopic(event.target.value)}>
           <option value="" disabled>
             Select an option
           </option>
@@ -51,7 +52,7 @@ export function EnquireForm({ className }: EnquireFormProps) {
             id={fields.date.id}
             name="date"
             type="date"
-            required
+            required={topic !== "general"}
             autoComplete="off"
           />
         </Field>
@@ -61,7 +62,7 @@ export function EnquireForm({ className }: EnquireFormProps) {
             id={fields.time.id}
             name="time"
             type="time"
-            required
+            required={topic !== "general"}
             autoComplete="off"
           />
         </Field>
@@ -75,7 +76,7 @@ export function EnquireForm({ className }: EnquireFormProps) {
           inputMode="numeric"
           min={1}
           step={1}
-          required
+          required={topic !== "general"}
           autoComplete="off"
         />
       </Field>

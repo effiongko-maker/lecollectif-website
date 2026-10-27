@@ -25,7 +25,7 @@ export function EventsCategories({ className }: EventsCategoriesProps) {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] lg:gap-16 xl:gap-24">
             <Reveal>
               <div className="max-w-md lg:sticky lg:top-28">
-                <p className="text-eyebrow text-ink-subtle">{eyebrow}</p>
+                <p className="text-eyebrow text-foreground-muted">{eyebrow}</p>
                 <Rule short className="mt-5" />
                 <h2
                   id="events-categories-heading"
@@ -41,20 +41,21 @@ export function EventsCategories({ className }: EventsCategoriesProps) {
 
             <ul className="flex flex-col">
               {eventCategories.map((category, index) => (
-                <Reveal key={category.id} delay={Math.min(index * 50, 200)}>
-                  <li
-                    className={cn(
-                      "border-t border-border py-7 last:border-b",
-                      "grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,10rem)_minmax(0,1fr)] sm:gap-8",
-                    )}
-                  >
-                    <p className="text-card text-foreground">
-                      {category.label}
-                    </p>
-                    <p className="max-w-md text-body text-foreground-muted">
-                      {category.description}
-                    </p>
-                  </li>
+                <Reveal
+                  as="li"
+                  key={category.id}
+                  delay={Math.min(index * 50, 200)}
+                  className={cn(
+                    "border-y border-border py-7",
+                    "grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,10rem)_minmax(0,1fr)] sm:gap-8",
+                  )}
+                >
+                  <p className="text-card text-foreground">
+                    {category.label}
+                  </p>
+                  <p className="max-w-md text-body text-foreground-muted">
+                    {category.description}
+                  </p>
                 </Reveal>
               ))}
             </ul>

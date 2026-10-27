@@ -1,7 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useMemo, useRef, useState, type KeyboardEvent } from "react";
 import { RequestSubmit } from "@/components/booking/RequestSubmit";
 import { FlowNav } from "@/components/booking/FlowNav";
 import { FlowShell } from "@/components/booking/FlowShell";
@@ -43,10 +42,9 @@ const initialState: BookState = {
   notes: "",
 };
 
-export function BookFlow() {
-  const searchParams = useSearchParams();
+export function BookFlow({ presetSpace = "" }: { presetSpace?: string }) {
   const intro = flowIntros.book;
-  const presetSpace = searchParams.get("space") ?? "";
+  const spaceButtons = useRef<(HTMLButtonElement | null)[]>([]);
 
   const [step, setStep] = useState<BookStep>(
     presetSpace && bookSpaceOptions.some((s) => s.id === presetSpace)
@@ -85,6 +83,23 @@ export function BookFlow() {
     setData((prev) => ({ ...prev, [key]: value }));
   }
 
+  function handleSpaceKeyDown(event: KeyboardEvent<HTMLButtonElement>, index: number) {
+    const last = bookSpaceOptions.length - 1;
+    let next: number;
+    switch (event.key) {
+      case "ArrowRight":
+      case "ArrowDown": next = (index + 1) % bookSpaceOptions.length; break;
+      case "ArrowLeft":
+      case "ArrowUp": next = (index + last) % bookSpaceOptions.length; break;
+      case "Home": next = 0; break;
+      case "End": next = last; break;
+      default: return;
+    }
+    event.preventDefault();
+    update("spaceId", bookSpaceOptions[next].id);
+    spaceButtons.current[next]?.focus();
+  }
+
   function goTo(next: BookStep) {
     setStep(next);
   }
@@ -113,14 +128,17 @@ export function BookFlow() {
               role="radiogroup"
               aria-label="Choose a space"
             >
-              {bookSpaceOptions.map((space) => {
+              {bookSpaceOptions.map((space, index) => {
                 const selected = data.spaceId === space.id;
                 return (
                   <button
                       key={space.id}
                       type="button"
                       role="radio"
+                      ref={(node) => { spaceButtons.current[index] = node; }}
+                      tabIndex={selected || (!data.spaceId && index === 0) ? 0 : -1}
                       aria-checked={selected}
+                      onKeyDown={(event) => handleSpaceKeyDown(event, index)}
                       onClick={() => update("spaceId", space.id)}
                       className={cn(
                         "group flex w-full items-start gap-4 border px-5 py-5 text-left transition-editorial md:px-6 md:py-6",

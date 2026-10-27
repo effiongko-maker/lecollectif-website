@@ -25,7 +25,7 @@ export function VisitExpect({ className }: VisitExpectProps) {
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.4fr)_minmax(0,0.6fr)] lg:gap-14 xl:gap-20">
             <Reveal>
               <div className="max-w-md">
-                <p className="text-eyebrow text-ink-subtle">{eyebrow}</p>
+                <p className="text-eyebrow text-foreground-muted">{eyebrow}</p>
                 <Rule short className="mt-4" />
                 <h2
                   id="visit-expect-heading"
@@ -41,20 +41,21 @@ export function VisitExpect({ className }: VisitExpectProps) {
 
             <ul className="flex flex-col">
               {points.map((point, index) => (
-                <Reveal key={point.id} delay={Math.min(index * 50, 150)}>
-                  <li
-                    className={cn(
-                      "border-t border-border py-6 last:border-b sm:py-7",
-                      "grid grid-cols-1 gap-2 sm:grid-cols-[minmax(0,8rem)_minmax(0,1fr)] sm:gap-8",
-                    )}
-                  >
-                    <p className="text-card text-foreground">
-                      {point.label}
-                    </p>
-                    <p className="max-w-md text-body text-foreground-muted">
-                      {point.description}
-                    </p>
-                  </li>
+                <Reveal
+                  as="li"
+                  key={point.id}
+                  delay={Math.min(index * 50, 150)}
+                  className={cn(
+                    "border-y border-border py-6 sm:py-7",
+                    "grid grid-cols-1 gap-2 sm:grid-cols-[minmax(0,8rem)_minmax(0,1fr)] sm:gap-8",
+                  )}
+                >
+                  <p className="text-card text-foreground">
+                    {point.label}
+                  </p>
+                  <p className="max-w-md text-body text-foreground-muted">
+                    {point.description}
+                  </p>
                 </Reveal>
               ))}
             </ul>

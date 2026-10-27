@@ -27,7 +27,7 @@ export function VisitLocation({ className }: VisitLocationProps) {
           <div className="grid grid-cols-1 items-stretch gap-10 lg:grid-cols-[minmax(0,0.42fr)_minmax(0,0.58fr)] lg:gap-12 xl:gap-16">
             <Reveal>
               <div className="flex h-full max-w-md flex-col lg:py-2">
-                <p className="text-eyebrow text-ink-subtle">{eyebrow}</p>
+                <p className="text-eyebrow text-foreground-muted">{eyebrow}</p>
                 <Rule short className="mt-4" />
                 <h2
                   id="visit-location-heading"

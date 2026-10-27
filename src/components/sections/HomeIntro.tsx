@@ -93,7 +93,7 @@ export function HomeIntro({ className }: HomeIntroProps) {
                       "border-t border-border pt-6 md:border-l md:border-t-0 md:bg-background-secondary/60 md:pt-2 md:pl-10 md:pr-0 lg:pl-14",
                   )}
                 >
-                  <p className="text-eyebrow text-ink-subtle">{rhythm.label}</p>
+                  <p className="text-eyebrow text-foreground-muted">{rhythm.label}</p>
                   <p className="mt-2 text-h3 text-foreground">
                     {rhythm.line}
                   </p>

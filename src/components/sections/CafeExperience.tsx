@@ -42,20 +42,21 @@ export function CafeExperience({ className }: CafeExperienceProps) {
 
             <ul className="flex flex-col">
               {items.map((item, index) => (
-                <Reveal key={item.id} delay={Math.min(index * 50, 200)}>
-                  <li
-                    className={cn(
-                      "border-t border-border py-6 last:border-b sm:py-7",
-                      "grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] sm:items-start sm:gap-8",
-                    )}
-                  >
-                    <p className="text-card text-foreground">
-                      {item.label}
-                    </p>
-                    <p className="max-w-md text-body text-foreground-muted">
-                      {item.description}
-                    </p>
-                  </li>
+                <Reveal
+                  as="li"
+                  key={item.id}
+                  delay={Math.min(index * 50, 200)}
+                  className={cn(
+                    "border-y border-border py-6 sm:py-7",
+                    "grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,11rem)_minmax(0,1fr)] sm:items-start sm:gap-8",
+                  )}
+                >
+                  <p className="text-card text-foreground">
+                    {item.label}
+                  </p>
+                  <p className="max-w-md text-body text-foreground-muted">
+                    {item.description}
+                  </p>
                 </Reveal>
               ))}
             </ul>

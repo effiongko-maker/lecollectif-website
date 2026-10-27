@@ -71,7 +71,7 @@ export function FlowShell({
                   )}
                   aria-current={state === "current" ? "step" : undefined}
                 >
-                  <span className="mr-1.5 tabular-nums opacity-60">
+                  <span className="mr-1.5 tabular-nums">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   {step.label}
@@ -80,7 +80,7 @@ export function FlowShell({
             })}
           </ol>
 
-          <div className="mt-10 md:mt-12">{children}</div>
+          <div data-flow-content className="mt-10 md:mt-12">{children}</div>
         </div>
       </Container>
     </section>

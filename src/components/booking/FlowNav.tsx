@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 
@@ -42,7 +44,18 @@ export function FlowNav({
           variant="primary"
           size="md"
           disabled={continueDisabled}
-          onClick={continueType === "button" ? onContinue : undefined}
+          onClick={continueType === "button" ? (event) => {
+            const scope = event.currentTarget.closest("[data-flow-content]");
+            const fields = scope?.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(
+              "input, select, textarea",
+            );
+            const invalid = fields && Array.from(fields).find((field) => !field.checkValidity());
+            if (invalid) {
+              invalid.reportValidity();
+              return;
+            }
+            onContinue?.();
+          } : undefined}
         >
           {continueLabel}
           <span aria-hidden>→</span>

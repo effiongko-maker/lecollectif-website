@@ -40,21 +40,22 @@ export function VisitHours({ className }: VisitHoursProps) {
 
           <ul className="mt-10 flex flex-col md:mt-12">
             {periods.map((period, index) => (
-              <Reveal key={period.id} delay={Math.min(index * 60, 160)}>
-                <li
-                  className={cn(
-                    "border-t border-border py-7 last:border-b sm:py-8",
-                    "grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,9rem)_minmax(0,12rem)_minmax(0,1fr)] sm:items-baseline sm:gap-8 lg:gap-12",
-                  )}
-                >
-                  <p className="text-eyebrow text-ink-subtle">{period.label}</p>
-                  <p className="text-card text-foreground">
-                    {period.time}
-                  </p>
-                  <p className="max-w-md text-body text-foreground-muted">
-                    {period.description}
-                  </p>
-                </li>
+              <Reveal
+                as="li"
+                key={period.id}
+                delay={Math.min(index * 60, 160)}
+                className={cn(
+                  "border-y border-border py-7 sm:py-8",
+                  "grid grid-cols-1 gap-3 sm:grid-cols-[minmax(0,9rem)_minmax(0,12rem)_minmax(0,1fr)] sm:items-baseline sm:gap-8 lg:gap-12",
+                )}
+              >
+                <p className="text-eyebrow text-ink-subtle">{period.label}</p>
+                <p className="text-card text-foreground">
+                  {period.time}
+                </p>
+                <p className="max-w-md text-body text-foreground-muted">
+                  {period.description}
+                </p>
               </Reveal>
             ))}
           </ul>

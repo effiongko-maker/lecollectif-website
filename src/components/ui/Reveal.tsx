@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 
 type RevealProps = {
   children: ReactNode;
+  as?: "div" | "li";
+  id?: string;
   className?: string;
   /** Stagger delay in ms */
   delay?: number;
@@ -14,8 +16,8 @@ type RevealProps = {
  * Scroll entrance reveal — calm and hospitality-oriented.
  * Reduced motion is handled in CSS (content remains visible).
  */
-export function Reveal({ children, className, delay = 0 }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
+export function Reveal({ children, className, delay = 0, as: Component = "div", id }: RevealProps) {
+  const ref = useRef<HTMLDivElement | HTMLLIElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -37,12 +39,13 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
   }, []);
 
   return (
-    <div
-      ref={ref}
+    <Component
+      id={id}
+      ref={(node: HTMLDivElement | HTMLLIElement | null) => { ref.current = node; }}
       className={cn("reveal-base", visible && "reveal-visible", className)}
       style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
-    </div>
+    </Component>
   );
 }
