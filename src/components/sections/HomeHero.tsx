@@ -26,7 +26,7 @@ export function HomeHero({ className }: HomeHeroProps) {
     >
       <Container
         width="wide"
-        className="grid grid-cols-1 items-center gap-8 py-8 md:gap-10 md:py-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10 xl:gap-12"
+        className="grid min-h-[calc(100vh-4.75rem-1px)] grid-cols-1 items-center gap-8 py-8 supports-[height:100dvh]:min-h-[calc(100dvh-4.75rem-1px)] md:min-h-[calc(100vh-6rem-1px)] md:gap-10 md:py-10 md:supports-[height:100dvh]:min-h-[calc(100dvh-6rem-1px)] lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:gap-10 xl:gap-12"
       >
         <div className="flex max-w-xl flex-col justify-center lg:max-w-none lg:pr-4">
           <p
