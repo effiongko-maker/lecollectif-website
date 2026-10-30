@@ -47,17 +47,17 @@ export const eventCategories: {
   {
     id: "conversations",
     label: "Conversations",
-    description: "Intimate talks and exchanges that invite dialogue.",
+    description: "Conversations worth having, with people worth listening to.",
   },
   {
     id: "culture",
     label: "Culture",
-    description: "Curated moments shaped by art, ideas and atmosphere.",
+    description: "Events centred on art and ideas.",
   },
   {
     id: "community",
     label: "Community",
-    description: "Gatherings that bring people together with purpose.",
+    description: "Meet-ups and shared activities.",
   },
   {
     id: "workshops",
@@ -67,7 +67,7 @@ export const eventCategories: {
   {
     id: "after-hours",
     label: "After Hours",
-    description: "Evening experiences when Le CollectiF shifts into night.",
+    description: "Evenings for good company and the occasional reason to stay a little longer.",
   },
 ];
 
@@ -82,7 +82,7 @@ export const homeEventsContent = {
   eyebrow: "After Hours",
   headline: ["Then the day", "gives way to", "something else."] as const,
   supporting:
-    "Curated evening experiences shaped around gathering, conversation, culture and connection — when Le CollectiF shifts from work into atmosphere.",
+    "We’re putting together an evening programme. Confirmed events and dates will appear here.",
   cta: {
     label: "Explore Events",
     href: "/events",
@@ -99,7 +99,7 @@ export const eventsPageContent = {
     eyebrow: "Events",
     headline: "Something worth gathering for.",
     supporting:
-      "A changing programme of experiences, conversations and gatherings at Le CollectiF — shaped around connection, culture and community.",
+      "We’re putting together a programme of conversations, workshops and events worth making time for.",
     media: {
       src: "/media/events/after-hours-lounge.png" as string | null,
       alt: "Atmospheric gathering space at Le CollectiF",
@@ -111,7 +111,7 @@ export const eventsPageContent = {
     eyebrow: "The programme",
     headline: "Ways we gather.",
     supporting:
-      "From quiet conversations to after-hours evenings, each experience is curated with intention.",
+      "Explore the kinds of events planned for Le CollectiF.",
   },
   status: {
     id: "whats-happening",

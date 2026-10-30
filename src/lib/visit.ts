@@ -1,4 +1,4 @@
-import { conversionActions, siteConfig } from "@/lib/site";
+import { conversionActions } from "@/lib/site";
 
 /**
  * Visit page — practical invitation to arrive at Le CollectiF.
@@ -31,7 +31,7 @@ export const visitPageContent = {
     id: "location",
     eyebrow: "Find us",
     headline: "A place worth arriving at.",
-    supporting: `You'll find ${siteConfig.name} at ${visitAddress.full} — a place in the heart of the city for work, conversation, gathering and time well spent.`,
+    supporting: "Find us at No. 2 River Benue Street, Maitama, Abuja.",
     cta: {
       label: "Get directions",
       href: visitMaps.directionsHref,
@@ -71,7 +71,7 @@ export const visitPageContent = {
         id: "work",
         label: "Work",
         description:
-          "Thoughtfully considered spaces for focused time and getting things done.",
+          "A place to get some work done or meet with your team.",
       },
       {
         id: "meet",

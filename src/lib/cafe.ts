@@ -40,7 +40,7 @@ export const cafePageContent = {
       {
         id: "coffee",
         label: "Coffee",
-        description: "A considered pause in the day.",
+        description: "A good cup of coffee is always a good place to start.",
       },
       {
         id: "conversation",
@@ -55,7 +55,7 @@ export const cafePageContent = {
       {
         id: "arrival-departure",
         label: "Arrival & Departure",
-        description: "A softer threshold within Le CollectiF.",
+        description: "Coffee before a meeting or on your way out.",
       },
     ],
   },

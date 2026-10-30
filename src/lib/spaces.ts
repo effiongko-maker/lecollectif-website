@@ -122,7 +122,7 @@ export const homeSpacesContent = {
   eyebrow: "The Spaces",
   headline: "Space for the way you work.",
   supporting:
-    "Thoughtfully considered spaces for focused work, private collaboration and purposeful gatherings.",
+    "Coworking, private offices and meeting rooms for your working day.",
   cta: {
     label: "Explore all spaces",
     href: "/spaces",
@@ -137,7 +137,7 @@ export const spacesPageContent = {
     eyebrow: "Spaces",
     headline: "Space for the way you work.",
     supporting:
-      "Thoughtfully considered spaces for focused work, private collaboration and purposeful gatherings.",
+      "Coworking, private offices and meeting rooms for your working day.",
     cta: {
       label: "Enquire about a space",
       href: conversionActions.enquire.href,
@@ -160,27 +160,27 @@ export const spacesPageContent = {
     eyebrow: "The programme",
     headline: "Spaces for how you gather.",
     supporting:
-      "Each setting is shaped for a different kind of presence — from quiet focus to shared conversation.",
+      "Find a place to work, meet with your team or bring people together.",
     items: [
       {
         id: "private-spaces",
-        label: "Private Spaces",
+        label: "Private Offices",
         description:
           "For focused work, quiet meetings and time that needs your full attention.",
         href: `${conversionActions.book.href}?space=private-offices`,
       },
       {
         id: "meeting-spaces",
-        label: "Meeting Spaces",
+        label: "Meeting Rooms",
         description:
-          "Considered rooms for conversations, presentations and collaborative work.",
+          "Rooms for meetings, presentations and collaborative work.",
         href: `${conversionActions.book.href}?space=meeting-rooms`,
       },
       {
         id: "gathering-spaces",
         label: "Gathering Spaces",
         description:
-          "Flexible environments for intimate gatherings, workshops, launches and shared experiences.",
+          "Spaces for gatherings, workshops and launches.",
         href: `${conversionActions.host.href}?space=gathering`,
       },
       {

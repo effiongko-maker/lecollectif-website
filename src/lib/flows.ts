@@ -43,7 +43,7 @@ export const hostEventTypes = [
   { value: "conversation", label: "Conversation" },
   { value: "workshop", label: "Workshop" },
   { value: "gathering", label: "Gathering" },
-  { value: "private", label: "Private / hosted experience" },
+  { value: "private", label: "Private event" },
   { value: "other", label: "Other" },
 ] as const;
 

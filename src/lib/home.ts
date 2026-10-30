@@ -6,13 +6,13 @@ export const homeHeroContent = {
   eyebrow: "Abuja · Nigeria",
   headline: ["Work. Meet.", "Gather. Unwind."] as const,
   supporting:
-    "A contemporary destination for work, connection and curated experiences.",
+    "A place to work, meet, enjoy good coffee and spend time well.",
   primaryCta: {
     label: "Enquire",
     href: "/enquire",
   },
   secondaryCta: {
-    label: "Explore Le CollectiF",
+    label: "Explore the spaces",
     href: "/spaces",
   },
 } as const;

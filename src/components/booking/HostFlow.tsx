@@ -180,8 +180,7 @@ export function HostFlow() {
             Requirements
           </h2>
           <p className="mt-3 text-body text-foreground-muted">
-            Share anything that will help us prepare a thoughtful quotation —
-            atmosphere, timing, equipment, or hospitality needs.
+            Describe the equipment, hospitality or other arrangements you would like to discuss.
           </p>
           <div className="mt-6">
             <Field label="Requirements" htmlFor="host-requirements">
