@@ -153,7 +153,7 @@ export const spacesPageContent = {
     eyebrow: "The Spaces",
     headline: "Made for work. Designed for people.",
     supporting:
-      "Le CollectiF brings together spaces for focused individual work, meetings, collaboration and larger gatherings — all within one considered environment.",
+      "Coworking spaces, private offices and meeting rooms will offer different ways to work, with space for an independent day or time together as a team.",
   },
   types: {
     id: "types",
@@ -194,9 +194,9 @@ export const spacesPageContent = {
   },
   closing: {
     eyebrow: "Find your space",
-    headline: "Let's find the right space for you.",
+    headline: "Explore the spaces.",
     supporting:
-      "Tell us what you're planning and we'll help you find the setting that fits.",
+      "From a desk for independent work to a room for your team, discover what will be part of Le CollectiF.",
     cta: {
       label: "Enquire",
       href: conversionActions.enquire.href,

@@ -25,7 +25,7 @@ export const visitPageContent = {
     eyebrow: "Visit",
     headline: "Come as you are.",
     supporting:
-      "Le CollectiF is a place to work, meet, gather and unwind — designed to accommodate the different rhythms of the day.",
+      "Le CollectiF has not opened yet. Here’s where you’ll find us and what to know before your first visit.",
   },
   location: {
     id: "location",
@@ -36,6 +36,12 @@ export const visitPageContent = {
       label: "Get directions",
       href: visitMaps.directionsHref,
     },
+  },
+  openingInformation: {
+    eyebrow: "Opening information",
+    headline: "Before your first visit.",
+    supporting:
+      "We’re getting ready to welcome you. Our opening date and visiting hours will be announced once confirmed.",
   },
   hours: {
     id: "when-to-visit",
@@ -65,7 +71,7 @@ export const visitPageContent = {
     eyebrow: "The Experience",
     headline: "More than a place to arrive.",
     supporting:
-      "Le CollectiF brings together spaces designed for different ways of being — from focused individual work to private conversations, shared gatherings and quieter moments in between.",
+      "Explore the spaces planned for work, meetings and future gatherings.",
     points: [
       {
         id: "work",
@@ -87,10 +93,10 @@ export const visitPageContent = {
     ],
   },
   closing: {
-    eyebrow: "Plan your visit",
-    headline: "We'll leave the light on.",
+    eyebrow: "Your first visit",
+    headline: "We look forward to welcoming you.",
     supporting:
-      "Whether you're coming to work, meet, gather or simply spend a little time here, we'd be glad to have you.",
+      "Until then, take a look at the workspaces, the Glass Café and spaces for gathering.",
     cta: {
       label: conversionActions.enquire.label,
       href: `${conversionActions.enquire.href}?intent=visit`,

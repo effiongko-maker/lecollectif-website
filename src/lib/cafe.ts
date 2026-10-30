@@ -12,7 +12,7 @@ export const cafePageContent = {
     eyebrow: "The Glass Café",
     headline: "Where the day slows down.",
     supporting:
-      "A considered space for coffee, conversation, informal meetings and time to linger — within the rhythm of Le CollectiF.",
+      "The Glass Café will be a place for coffee, conversation and a little time away from your desk.",
     cta: {
       label: conversionActions.enquire.label,
       href: `${conversionActions.enquire.href}?offering=glass-cafe`,
@@ -28,14 +28,14 @@ export const cafePageContent = {
     eyebrow: "The Café",
     headline: "A place to pause.",
     supporting:
-      "Coffee, conversation and a little more time. The Glass Café offers a softer rhythm within Le CollectiF — a place to meet informally, take a break from focused work or simply stay a little longer.",
+      "Not every conversation needs a meeting room. Some are better over coffee, with time to see where they lead.",
   },
   experience: {
     id: "experience",
     eyebrow: "The Experience",
     headline: "Made for lingering.",
     supporting:
-      "Different ways of being here — none of them rushed.",
+      "A first cup, a catch-up, a break between meetings. Room for the smaller moments in your day.",
     items: [
       {
         id: "coffee",
@@ -64,7 +64,7 @@ export const cafePageContent = {
     eyebrow: "Atmosphere",
     headline: "Light, glass and quiet company.",
     supporting:
-      "A considered setting shaped by natural light, architectural calm and the simple pleasure of staying awhile.",
+      "A quieter setting for an unhurried conversation or a little time on your own.",
     media: {
       src: "/media/cafe/glass-cafe-concept.png" as string | null,
       alt: "Conceptual architectural visual of the Glass Café at Le CollectiF",
@@ -76,17 +76,17 @@ export const cafePageContent = {
     eyebrow: "Within Le CollectiF",
     headline: "Part of the day's rhythm.",
     supporting:
-      "The Café sits between focused work and evening gathering — a place where the pace shifts, but the destination stays the same.",
+      "Alongside the workspaces and event spaces, the Glass Café will make room for the moments between work and gathering.",
     links: [
       { label: "Explore Spaces", href: "/spaces" },
       { label: "Explore Events", href: "/events" },
     ],
   },
   closing: {
-    eyebrow: "Visit the Café",
-    headline: "Come for coffee. Stay a little longer.",
+    eyebrow: "The Glass Café",
+    headline: "Coffee, in good company.",
     supporting:
-      "For tables, hosting or simply finding out more about the Café, get in touch with us.",
+      "Explore how the Glass Café fits into a day at Le CollectiF.",
     cta: {
       label: conversionActions.enquire.label,
       href: `${conversionActions.enquire.href}?offering=glass-cafe`,
@@ -99,7 +99,7 @@ export const homeCafeContent = {
   eyebrow: "The Glass Café",
   headline: "Where the day slows down.",
   supporting:
-    "A distinctive setting for coffee, conversation, informal meetings and lingering — a place to pause within the rhythm of Le CollectiF.",
+    "Coffee before a meeting, a conversation over another cup, or a little time to yourself: a taste of what the Glass Café will bring to Le CollectiF.",
   cta: {
     label: "Discover the Café",
     href: "/cafe",
