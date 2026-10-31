@@ -4,7 +4,7 @@ export const businessInNigeriaContent = {
     eyebrow: "Beyond the workspace",
     headline: "Business in Nigeria",
     supporting:
-      "Alongside our workspaces, we’re exploring how local orientation and connections could support individuals and businesses establishing a presence in Nigeria.",
+      "Le CollectiF aims to help individuals and businesses establish or expand their presence in Nigeria by providing workspace, local business connections and access to relevant professional support.",
     link: { label: "Explore Business in Nigeria", href: "/business-in-nigeria" },
   },
   hero: {
@@ -37,7 +37,7 @@ export const businessInNigeriaContent = {
         id: "navigate-the-local-environment",
         headline: "Navigate the Local Environment",
         supporting:
-          "Local orientation and introductions to appropriate professional service providers could help you understand where to turn. Any such introductions would depend on the support arrangements confirmed before launch.",
+          "Get familiar with the Nigerian business environment and connect with relevant professionals who can guide you through the process of setting up or expanding your business.",
       },
       {
         id: "connect-and-grow",
