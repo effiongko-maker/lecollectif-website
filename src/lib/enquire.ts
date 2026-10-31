@@ -50,8 +50,8 @@ export const enquirePageContent = {
       },
       message: {
         id: "enquiry-message",
-        label: "Tell us a little about what you're planning",
-        placeholder: "Tell us what you have in mind...",
+        label: "How can we help?",
+        placeholder: "Your question or plans",
       },
     },
     submitLabel: "Send enquiry",

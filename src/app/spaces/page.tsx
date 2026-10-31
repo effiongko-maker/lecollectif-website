@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
+import { SpacesBusinessSupport } from "@/components/sections/SpacesBusinessSupport";
 import { SpacesClosing } from "@/components/sections/SpacesClosing";
 import { SpacesHero } from "@/components/sections/SpacesHero";
 import { SpacesIntro } from "@/components/sections/SpacesIntro";
 import { SpacesTypes } from "@/components/sections/SpacesTypes";
-import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Spaces",
-  description: `Thoughtfully considered spaces at ${siteConfig.name} for focused work, private collaboration and purposeful gatherings.`,
+  description: "Explore the coworking spaces, private offices and meeting rooms planned for Le CollectiF in Maitama, Abuja.",
 };
 
 export default function SpacesPage() {
@@ -16,6 +16,7 @@ export default function SpacesPage() {
       <SpacesHero />
       <SpacesIntro />
       <SpacesTypes />
+      <SpacesBusinessSupport />
       <SpacesClosing />
     </>
   );

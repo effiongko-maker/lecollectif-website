@@ -11,7 +11,7 @@ export const siteConfig = {
   shortName: "Le CollectiF",
   location: "Abuja, Nigeria",
   description:
-    "A premium hospitality-driven workspace and social destination in Abuja — a place to work, meet, gather and unwind.",
+    "Le CollectiF is taking shape in Abuja, with workspaces, the Glass Café, event spaces and poolside facilities. Opening details will follow.",
   tagline: "Work, meet, gather and unwind.",
 } as const;
 
@@ -121,7 +121,7 @@ export const footerNavColumns: FooterNavColumn[] = [
   {
     id: "connect",
     label: "Connect",
-    note: "Stay close to what's happening.",
+    note: "Opening details will be shared as plans are confirmed.",
     links: [
       { label: "Instagram" },
       { label: "WhatsApp" },

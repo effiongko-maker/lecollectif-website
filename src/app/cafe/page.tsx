@@ -5,11 +5,10 @@ import { CafeExperience } from "@/components/sections/CafeExperience";
 import { CafeHero } from "@/components/sections/CafeHero";
 import { CafePhilosophy } from "@/components/sections/CafePhilosophy";
 import { CafeWithin } from "@/components/sections/CafeWithin";
-import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "The Glass Café",
-  description: `A considered space for coffee, conversation, informal meetings and time to linger at ${siteConfig.name}.`,
+  description: "Discover the planned Glass Café at Le CollectiF in Maitama, Abuja.",
 };
 
 export default function CafePage() {

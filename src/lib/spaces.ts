@@ -122,7 +122,7 @@ export const homeSpacesContent = {
   eyebrow: "The Spaces",
   headline: "Space for the way you work.",
   supporting:
-    "Thoughtfully considered spaces for focused work, private collaboration and purposeful gatherings.",
+    "Coworking, private offices and meeting rooms for your working day.",
   cta: {
     label: "Explore all spaces",
     href: "/spaces",
@@ -137,7 +137,7 @@ export const spacesPageContent = {
     eyebrow: "Spaces",
     headline: "Space for the way you work.",
     supporting:
-      "Thoughtfully considered spaces for focused work, private collaboration and purposeful gatherings.",
+      "Coworking, private offices and meeting rooms for your working day.",
     cta: {
       label: "Enquire about a space",
       href: conversionActions.enquire.href,
@@ -153,34 +153,34 @@ export const spacesPageContent = {
     eyebrow: "The Spaces",
     headline: "Made for work. Designed for people.",
     supporting:
-      "Le CollectiF brings together spaces for focused individual work, meetings, collaboration and larger gatherings — all within one considered environment.",
+      "Coworking spaces, private offices and meeting rooms will offer different ways to work, with space for an independent day or time together as a team.",
   },
   types: {
     id: "types",
     eyebrow: "The programme",
     headline: "Spaces for how you gather.",
     supporting:
-      "Each setting is shaped for a different kind of presence — from quiet focus to shared conversation.",
+      "Find a place to work, meet with your team or bring people together.",
     items: [
       {
         id: "private-spaces",
-        label: "Private Spaces",
+        label: "Private Offices",
         description:
           "For focused work, quiet meetings and time that needs your full attention.",
         href: `${conversionActions.book.href}?space=private-offices`,
       },
       {
         id: "meeting-spaces",
-        label: "Meeting Spaces",
+        label: "Meeting Rooms",
         description:
-          "Considered rooms for conversations, presentations and collaborative work.",
+          "Rooms for meetings, presentations and collaborative work.",
         href: `${conversionActions.book.href}?space=meeting-rooms`,
       },
       {
         id: "gathering-spaces",
         label: "Gathering Spaces",
         description:
-          "Flexible environments for intimate gatherings, workshops, launches and shared experiences.",
+          "Spaces for gatherings, workshops and launches.",
         href: `${conversionActions.host.href}?space=gathering`,
       },
       {
@@ -194,9 +194,9 @@ export const spacesPageContent = {
   },
   closing: {
     eyebrow: "Find your space",
-    headline: "Let's find the right space for you.",
+    headline: "Explore the spaces.",
     supporting:
-      "Tell us what you're planning and we'll help you find the setting that fits.",
+      "From a desk for independent work to a room for your team, discover what will be part of Le CollectiF.",
     cta: {
       label: "Enquire",
       href: conversionActions.enquire.href,
