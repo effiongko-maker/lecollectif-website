@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpacesBusinessSupport } from "@/components/sections/SpacesBusinessSupport";
 import { SpacesClosing } from "@/components/sections/SpacesClosing";
 import { SpacesHero } from "@/components/sections/SpacesHero";
 import { SpacesIntro } from "@/components/sections/SpacesIntro";
@@ -15,6 +16,7 @@ export default function SpacesPage() {
       <SpacesHero />
       <SpacesIntro />
       <SpacesTypes />
+      <SpacesBusinessSupport />
       <SpacesClosing />
     </>
   );
