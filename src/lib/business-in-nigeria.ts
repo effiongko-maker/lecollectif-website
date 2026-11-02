@@ -12,8 +12,6 @@ export const businessInNigeriaContent = {
     headline: "Business in Nigeria",
     supporting:
       "A professional base and a place to make connections, for your next steps in Nigeria.",
-    status:
-      "Le CollectiF has not opened yet. This offering is taking shape, and the scope of support will be confirmed before it becomes available.",
   },
   introduction: {
     eyebrow: "A local starting point",
@@ -57,10 +55,10 @@ export const businessInNigeriaContent = {
     link: { label: "Explore the spaces", href: "/spaces" },
   },
   closing: {
-    eyebrow: "Before we open",
-    headline: "Get to know Le CollectiF.",
+    eyebrow: "Business in Nigeria",
+    headline: "Start the Conversation",
     supporting:
-      "Business in Nigeria services are not currently available. While the offering takes shape, explore the destination and what we have in mind.",
+      "Whether you’re exploring opportunities in Nigeria, establishing a local presence or expanding an existing business, Le CollectiF offers a starting point for meaningful connections. Tell us what you’re looking to achieve, and let’s explore how our workspace, local knowledge and professional network can support your next steps.",
     link: { label: "Explore Le CollectiF", href: "/" },
   },
   description:
