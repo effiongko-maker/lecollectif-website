@@ -16,8 +16,9 @@ async function run() {
     const tag = html.match(new RegExp(`<meta[^>]*${selector}[^>]*>`))?.[0];
     assert.ok(tag?.includes("Not yet available."), selector);
   }
-  assert.match(main, /Le CollectiF has not opened yet\./);
-  assert.match(main, /Business in Nigeria services are not currently available\./);
+  assert.doesNotMatch(main, /Le CollectiF has not opened yet\./);
+  assert.doesNotMatch(main, /Business in Nigeria services are not currently available\./);
+  assert.match(main, /Start the Conversation/);
   assert.match(main, /independent professional providers under separate arrangements/);
   assert.doesNotMatch(main, /<(?:form|input|select|textarea|button|progress)\b/i);
   assert.doesNotMatch(main, /mailto:|tel:|href="\/(?:book|enquire|reserve|host)/);

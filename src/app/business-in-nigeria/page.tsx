@@ -31,7 +31,6 @@ export default function BusinessInNigeriaPage() {
                 {content.hero.headline}
               </h1>
               <p className="mt-5 text-body-lg text-foreground-muted">{content.hero.supporting}</p>
-              <p className="mt-4 text-body text-foreground-muted">{content.hero.status}</p>
             </div>
           </Reveal>
         </Container>
