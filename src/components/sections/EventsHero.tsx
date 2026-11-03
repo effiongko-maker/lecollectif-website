@@ -44,9 +44,11 @@ export function EventsHero({ className }: EventsHeroProps) {
             {headline}
           </h1>
 
-          <p className="mt-6 max-w-md text-body-lg text-foreground-muted hero-reveal hero-delay-3">
-            {supporting}
-          </p>
+          <div className="mt-6 max-w-md space-y-4 text-body-lg text-foreground-muted hero-reveal hero-delay-3">
+            {(Array.isArray(supporting) ? supporting : [supporting]).map((paragraph, index) => (
+              <p key={`${paragraph}-${index}`}>{paragraph}</p>
+            ))}
+          </div>
 
           <div className="mt-8 hero-reveal hero-delay-4">
             <TextLink
