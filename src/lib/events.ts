@@ -80,11 +80,11 @@ export const collectifEvents: CollectifEvent[] = [];
 export const homeEventsContent = {
   id: "events",
   eyebrow: "After Hours",
-  headline: ["Then the day", "gives way to", "something else."] as const,
+  headline: ["Then the day", "gives way to", "something else."],
   supporting:
-    "We’re putting together an evening programme. Confirmed events and dates will appear here.",
+    "From private celebrations and corporate functions to cultural gatherings and conversations, Le CollectiF brings people together through thoughtfully planned experiences. Explore our event management services and the experiences we're creating.",
   cta: {
-    label: "Explore Events",
+    label: "Explore Events & Event Management",
     href: "/events",
   },
   media: {
@@ -96,14 +96,52 @@ export const homeEventsContent = {
 
 export const eventsPageContent = {
   hero: {
-    eyebrow: "Events",
-    headline: "Something worth gathering for.",
-    supporting:
-      "We’re putting together a programme of conversations, workshops and events worth making time for.",
+    eyebrow: "Event Management",
+    headline: "Your occasion. Thoughtfully brought together.",
+    supporting: [
+      "A memorable event is rarely accidental. It takes careful planning, attention to detail and an understanding of what makes an occasion special.",
+      "At Le CollectiF, we bring these elements together through a considered approach to event planning and management. From private celebrations and intimate gatherings to corporate functions and larger events, we work with clients to create experiences that reflect their vision and purpose.",
+    ],
     media: {
       src: "/media/events/after-hours-lounge.png" as string | null,
       alt: "Atmospheric gathering space at Le CollectiF",
       objectPosition: "center 40%",
+    },
+  },
+  services: {
+    id: "event-management-services",
+    eyebrow: "Event Management",
+    headline: "What we offer",
+    supporting:
+      "Our services cover event conceptualisation, planning, vendor coordination, logistics and on-site management. Whether the occasion takes place within our spaces or at an external venue, our role is to manage the details so that hosts can focus on their guests and the experience itself.",
+    offerings: [
+      {
+        title: "Event Conceptualisation & Planning",
+        description:
+          "Developing the event concept, programme and overall experience.",
+      },
+      {
+        title: "Vendor & Supplier Coordination",
+        description:
+          "Identifying and coordinating the service providers required for each occasion.",
+      },
+      {
+        title: "Logistics & Production",
+        description:
+          "Managing schedules, setup, equipment and operational requirements.",
+      },
+      {
+        title: "On-site Event Management",
+        description:
+          "Overseeing activities and coordinating teams to ensure the event runs smoothly.",
+      },
+    ],
+    closingHeading: "Have an occasion in mind?",
+    closingCopy:
+      "Tell us what you're planning. We'd love to explore how Le CollectiF can help bring it together.",
+    cta: {
+      label: "Enquire About an Event",
+      href: conversionActions.enquire.href,
     },
   },
   categories: {
@@ -153,18 +191,11 @@ export function hasScheduledEvents(): boolean {
   return getUpcomingEvents().length > 0;
 }
 
-/** Hero CTA — programme when empty; upcoming list when events exist */
+/** Hero CTA — direct to the event management services section. */
 export function getEventsHeroCta() {
-  if (hasScheduledEvents()) {
-    return {
-      label: "View upcoming events",
-      href: `#${eventsPageContent.upcoming.id}`,
-    };
-  }
-
   return {
-    label: "Explore the programme",
-    href: `#${eventsPageContent.categories.id}`,
+    label: "Explore our services",
+    href: `#${eventsPageContent.services.id}`,
   };
 }
 
