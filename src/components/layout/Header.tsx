@@ -61,20 +61,49 @@ export function Header({ className }: HeaderProps) {
 
   useEffect(() => {
     const onScroll = () => {
+      if (open) return;
       setScrolled(window.scrollY > 16);
     };
 
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [open]);
 
   useEffect(() => {
     if (!open) return;
 
     const previouslyFocused = document.activeElement as HTMLElement | null;
     const panel = panelRef.current;
-    closeRef.current?.focus();
+    const body = document.body;
+    const root = document.documentElement;
+    const scrollX = window.scrollX;
+    const scrollY = window.scrollY;
+    const previousBodyStyle = {
+      overflow: body.style.overflow,
+      position: body.style.position,
+      top: body.style.top,
+      left: body.style.left,
+      width: body.style.width,
+    };
+    const previousRootOverflow = root.style.overflow;
+    const previousScrollBehavior = root.style.scrollBehavior;
+
+    // A fixed body locks touch scrolling on iOS as well as desktop wheel input.
+    root.style.overflow = "hidden";
+    root.style.scrollBehavior = "auto";
+    Object.assign(body.style, {
+      overflow: "hidden",
+      position: "fixed",
+      top: `-${scrollY}px`,
+      left: `-${scrollX}px`,
+      width: "100%",
+    });
+    closeRef.current?.focus({ preventScroll: true });
+
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const onDesktop = () => { if (desktop.matches) setOpen(false); };
+    desktop.addEventListener("change", onDesktop);
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -103,16 +132,20 @@ export function Header({ className }: HeaderProps) {
     };
 
     document.addEventListener("keydown", onKeyDown);
-    document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = "";
-      previouslyFocused?.focus?.();
+      desktop.removeEventListener("change", onDesktop);
+      Object.assign(body.style, previousBodyStyle);
+      root.style.overflow = previousRootOverflow;
+      window.scrollTo(scrollX, scrollY);
+      root.style.scrollBehavior = previousScrollBehavior;
+      previouslyFocused?.focus({ preventScroll: true });
     };
   }, [open]);
 
   return (
+    <>
     <header
       className={cn(
         "sticky top-0 z-50 border-b border-border/80 transition-editorial",
@@ -163,7 +196,9 @@ export function Header({ className }: HeaderProps) {
           </span>
         </button>
       </Container>
+    </header>
 
+      {/* Keep the viewport-fixed panel outside the header's backdrop-filter. */}
       <div
         ref={panelRef}
         id={menuId}
@@ -173,7 +208,7 @@ export function Header({ className }: HeaderProps) {
         aria-hidden={!open}
         {...(!open ? { inert: true } : {})}
         className={cn(
-          "fixed inset-0 z-50 flex flex-col bg-background lg:hidden",
+          "fixed inset-0 z-50 flex flex-col overflow-y-auto overscroll-contain bg-background lg:hidden",
           "transition-[opacity,transform] duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
           "motion-reduce:translate-y-0 motion-reduce:transition-none",
           open
@@ -183,7 +218,7 @@ export function Header({ className }: HeaderProps) {
       >
         <Container
           width="wide"
-          className="flex h-[4.75rem] items-center justify-between"
+          className="flex h-[4.75rem] shrink-0 items-center justify-between"
         >
           <BrandMark onNavigate={closeMenu} />
           <button
@@ -199,7 +234,7 @@ export function Header({ className }: HeaderProps) {
 
         <Container
           width="wide"
-          className="flex flex-1 flex-col justify-between pb-12 pt-6"
+          className="flex flex-1 shrink-0 flex-col justify-between pb-12 pt-6"
         >
           <nav aria-label="Mobile primary" className="flex flex-col">
             {mainNav.map((item) => (
@@ -227,6 +262,6 @@ export function Header({ className }: HeaderProps) {
           </div>
         </Container>
       </div>
-    </header>
+    </>
   );
 }
