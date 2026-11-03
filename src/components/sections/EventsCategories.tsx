@@ -18,7 +18,7 @@ export function EventsCategories({ className }: EventsCategoriesProps) {
     <section
       id={id}
       aria-labelledby="events-categories-heading"
-      className={cn("bg-background-secondary scroll-mt-24", className)}
+      className={cn("bg-[#f7f4ee] scroll-mt-24 border-t border-[#cbb892]/60", className)}
     >
       <div className="section-space-md">
         <Container width="wide">
